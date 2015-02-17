@@ -1,0 +1,116 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1181" measuredH="239" mockupW="981" mockupH="182">
+  <controls>
+    <control controlID="2" controlTypeID="__group__" x="200" y="97" w="100" h="70" measuredW="240" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="-1" h="-1" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="2"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="25" w="100" h="-1" measuredW="75" measuredH="21" zOrder="1" locked="false" isInGroup="2">
+          <controlProperties>
+            <align>center</align>
+            <text>Accueil%20Quiz</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="5" controlTypeID="__group__" x="439" y="99" w="100" h="70" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="-1" h="-1" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="5"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="25" w="100" h="-1" measuredW="65" measuredH="21" zOrder="1" locked="false" isInGroup="5">
+          <controlProperties>
+            <align>center</align>
+            <text>Question%20*n*</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="7" controlTypeID="__group__" x="676" y="57" w="100" h="70" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="-1" h="-1" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="7"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="25" w="100" h="-1" measuredW="73" measuredH="21" zOrder="1" locked="false" isInGroup="7">
+          <controlProperties>
+            <align>center</align>
+            <text>Correction%20*n*</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Arrow" x="539" y="88" w="137" h="30" measuredW="150" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <stroke>dotted</stroke>
+        <text>Validation</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Arrow" x="494" y="167" w="233" h="72" measuredW="150" measuredH="100" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>-1</curvature>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <stroke>dotted</stroke>
+        <text>retour%20question%20pr%E9c%E9dente</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Arrow" x="727" y="169" w="224" h="69" measuredW="150" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>-1</curvature>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <stroke>dotted</stroke>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Arrow" x="539" y="134" w="360" h="10" measuredW="150" measuredH="100" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>-1</curvature>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <stroke>dotted</stroke>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Arrow" x="300" y="127" w="142" h="10" measuredW="150" measuredH="100" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <leftArrow>false</leftArrow>
+        <stroke>dotted</stroke>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Arrow" x="1014" y="132" w="54" h="10" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <stroke>dotted</stroke>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="__group__" x="1081" y="104" w="100" h="70" measuredW="100" measuredH="70" zOrder="9" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="-1" h="-1" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="24"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="25" w="100" h="-1" measuredW="98" measuredH="21" zOrder="1" locked="false" isInGroup="24">
+          <controlProperties>
+            <align>center</align>
+            <text>Correction%20finale</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="25" controlTypeID="__group__" x="899" y="99" w="100" h="70" measuredW="100" measuredH="70" zOrder="10" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="-1" h="-1" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="25"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="25" w="100" h="-1" measuredW="79" measuredH="21" zOrder="1" locked="false" isInGroup="25">
+          <controlProperties>
+            <align>center</align>
+            <text>Question%20*n+1*</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Arrow" x="776" y="88" w="123" h="39" measuredW="150" measuredH="100" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>1</curvature>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <stroke>dotted</stroke>
+        <text>Suivant</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
