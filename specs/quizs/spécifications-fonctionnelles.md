@@ -88,11 +88,9 @@ La liste affiche les attributs suivants :
 - date et heure de la session
 - score obtenu 
 - lien vers le détail de ses réponses 
-- lien vers un traitement de suppression |
+- lien vers un traitement de suppression 
 
-#### Liste d'une classe
-
-#### Liste d'un élève
+[![Ecran de liste des sessions](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/liste-sessions.png)]
 
 ## Calcul et gestion des scores
 Afin de ne pas encourager la triche (!) il n'est pas possible d'obtenir le score maximum si l'on coches toutes les réponses à une question. Le calcul du score se fait donc en ajoutant des pondérations en fonction du nombre de réponses faites par rapport au nombre deréponses attendues.
