@@ -58,7 +58,7 @@ Sinon, il n'a pas la possibilité de revenir à la question précédente (au pas
 
 Tous ces paramètres pourrons être initialisés, soit un par un, soit par un mode d'exécution qui contraint les valeurs de plusieurs paramètres à la fois.
 
-Les modes d'exécution du quiz à sa créationsont au nombre de 3 :
+Les modes d'exécution du quiz à sa création sont au nombre de 3 :
 
 | Mode         | Melanger | Refaire | Afficher score | afficher correction | corr. à la fin |
 | ------------ | -------- | ------- | -------------- | ------------------- | -------------- |
@@ -67,8 +67,17 @@ Les modes d'exécution du quiz à sa créationsont au nombre de 3 :
 | Validation   | Y | N | N | N | N |
 
 ### Choix du type de question
-
+#### Données communes à tous les types de questions.
+- Le libellé
+- La question
+- L'aide
+- Le commentaire de correction
+- 
 ### QCM / QCU
+C'est une question à choix multiples ou choix unique. Le rendu est le même pour ces deux catégories de questions.
+Le fomrulaire de création est donc identique.
+Par défaut, 4 proposition sont proposées d'emblée au remplissage, mais il est possible d'en ajouter des supplémentaires avec un bouton prévu à cet effet.
+![Formulaire QCM/U](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-QCM.png)
 
 ### Appariements
 
