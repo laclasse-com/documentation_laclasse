@@ -2,7 +2,7 @@
 # Spécifications fonctionnelles
 
 ## Introduction
-Le module de s en ligne est un composant de l'ancienne version de laclasse.com. Il doit être ré-écrit pour la version 3.
+Le module de quizs en ligne est un composant de l'ancienne version de laclasse.com. Il doit être ré-écrit pour la version 3.
 Ce module comporte 3 points d'entrées : 
 
 - L'exécution des quizs
@@ -82,6 +82,7 @@ Par défaut, 4 propositions sont disponibles d'emblée à la saisie, mais il est
 ![Formulaire QCM/U](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-QCM.png)
 
 ### Appariements
+![Formulaire Appariement](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-appariements.png)
 
 ### Textes à trous
 
