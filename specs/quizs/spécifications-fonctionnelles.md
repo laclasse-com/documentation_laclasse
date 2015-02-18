@@ -37,7 +37,7 @@ Le quiz est un type de document particulier succeptible d'être manipulé dans l
 Cela permet de le partager facilement.
 
 ### Paramètres généraux
-Les paramètres suivants seront définit et accessible en modification au début du processus de création d'un quiz
+Les paramètres suivants seront définit et accessibles en modification au début du processus de création d'un quiz
 Tous ces paramètres prennent les valeurs O/N.
 
 - _mélange des questions_
@@ -56,7 +56,7 @@ Sinon, il n'a pas la possibilité de revenir à la question précédente (au pas
 		- _Correction après chaque question_
 		- _Correction à la fin de l'exercice_
 
-Tous ces paramètres pourrons être initialisé, soit un par un, soit par un mode d'exécution qui contriant les valeurs de plusieurs paramètres à la fois.
+Tous ces paramètres pourrons être initialisés, soit un par un, soit par un mode d'exécution qui contraint les valeurs de plusieurs paramètres à la fois.
 
 Les modes d'exécution du quiz à sa créationsont au nombre de 3 :
 
@@ -68,7 +68,7 @@ Les modes d'exécution du quiz à sa créationsont au nombre de 3 :
 
 ### Choix du type de question
 
-### QCM / 
+### QCM / QCU
 
 ### Appariements
 
