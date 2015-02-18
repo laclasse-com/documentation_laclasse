@@ -42,7 +42,9 @@ Il sera ré-écrit quasiment à iso-fonctionnalité de la version existante, en 
 ### Serveur
   - Sinatra
   - Ruby
+
 ### Backend
   - Mysql
+  
 ### Client
   - Angular JS
