@@ -16,6 +16,9 @@ Les des questions sont au nombre de 3 :
 - Appariement ou Association
 - Textes à trous
 
+L'application sera faite au maximum en mode "Single Page App" en utilisant les fonctionnalités d'Angular JS.
+Dans les principes généraux de navigation, il sera demandé de veiller à ce que chaque action de destruction de données soit confirmée par l'utilisateurs.
+
 ## Exécuter/Jouer un Quiz
 	Il s'agit de l'interface de visualisation ou de rendu d'un Quiz, qui permet de l'exécuter.
 
@@ -29,8 +32,27 @@ Les des questions sont au nombre de 3 :
 	Les sessions des autres utilisateurs que les élèves sont détruites un fois terminées.
 
 ## Créer / Modifier un quiz
+Le quiz est un type de document particulier succeptible d'être manipulé dans l'application de gestion documentaire de l'ENT.
+Cela permet de le partager facilement.
 
 ### Paramètres généraux
+Les paramètres suivants seront définit et accessible en modification au début du processus de création d'un quiz
+Tous ces paramètres prennent les valeurs O/N.
+
+- _mélange des questions_
+	Si activé, permet de mélanger aléatoirement l'ordre des questions du quiz. Ce calcul est alors effectué à l'initialisation de la session.
+- _affichage de la note_
+- _refaire le quiz plusieurs fois_
+- _Masquer la correction_
+	- oui
+	- non 
+		- _Correction après chaque question_
+		- _Correction à la fin de l'exercice_
+
+Il faudra pouvoir paramétrer les modes d'exécution du quiz à sa création. On distingue 3 modes d'exécution
+- Entrainement
+- Exercice
+- Validation
 
 ### Choix du type de question
 
@@ -98,3 +120,4 @@ Les des questions sont au nombre de 3 :
 2. Tout utilisateur peut avoir une session de quiz.
 3. Seules les sessions des élèves sont conservées.
 4. Les sessions des élèves sur un quiz donné sont consultables/gérables par le prof qui leur a publié.
+5. Le mélange des questions est effectué à l'initialisation de la session.
