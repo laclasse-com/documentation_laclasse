@@ -21,7 +21,7 @@ L'application sera faite au maximum en mode "Single Page App" en utilisant les f
 Dans les principes généraux de navigation, il sera demandé de veiller à ce que chaque action de destruction de données soit confirmée par l'utilisateurs.
 
 ## Exécuter/Jouer un Quiz
-	Il s'agit de l'interface de visualisation ou de rendu d'un Quiz, qui permet de l'exécuter.
+Il s'agit de l'interface de visualisation ou de rendu d'un Quiz, qui permet de l'exécuter.
 
 ### IHM
 	
@@ -60,9 +60,11 @@ Tous ces paramètres pourrons être initialisé, soit un par un, soit par un mod
 
 Les modes d'exécution du quiz à sa créationsont au nombre de 3 :
 
-- Entrainement	| MELANGER=N | REFAIRE=Y | AFFICHAGE-SCORE=Y | AFFICHAGE-CORRECTION=Y | CORRECTION-FIN=N
-- Exercice	| MELANGER=Y | REFAIRE=N | AFFICHAGE-SCORE=Y | AFFICHAGE-CORRECTION=Y | CORRECTION-FIN=Y
-- Validation	| MELANGER=Y | REFAIRE=N | AFFICHAGE-SCORE=N | AFFICHAGE-CORRECTION=N | CORRECTION-FIN=N
+| Mode         | Melanger | Refaire | Afficher score | afficher correction | corr. à la fin |
+| ------------ | -------- | ------- | -------------- | ------------------- | -------------- |
+| Entrainement | N | Y | Y | Y | N |
+| Exercice     | Y | N | Y | Y | Y |
+| Validation   | Y | N | N | N | N |
 
 ### Choix du type de question
 
