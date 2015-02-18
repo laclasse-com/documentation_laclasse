@@ -9,7 +9,7 @@ Ce module comporte 3 points d'entrées :
 - La création/modification (back-office)
 - L'examen des sessions et résultats des élèves.
 
-Il sera ré-écrit quasiment à iso-fonctionnalité de la version existante, en ajoutant toutefois la prise en charge des contenus multimédia (Audio, Images, Vidéos) dans les questions, les éléments de réponse et les points de corrections.
+Il sera ré-écrit quasiment à iso-fonctionnalité de la version existante, en ajoutant toutefois la prise en charge des contenus multimédia (Audio, Images, Vidéos) dans les questions, les éléments de réponse et les commentaires de corrections.
 
 Les des questions sont au nombre de 3 : 
 
@@ -19,6 +19,7 @@ Les des questions sont au nombre de 3 :
 
 L'application sera faite au maximum en mode "Single Page App" en utilisant les fonctionnalités d'Angular JS.
 Dans les principes généraux de navigation, il sera demandé de veiller à ce que chaque action de destruction de données soit confirmée par l'utilisateurs.
+Elle devra être compatible avec les tablettes (responsive design, ergonomie adaptée pour les boutons et les cases à cocher).
 
 ## Exécuter/Jouer un Quiz
 Il s'agit de l'interface de visualisation ou de rendu d'un Quiz, qui permet de l'exécuter.
@@ -76,7 +77,7 @@ Les modes d'exécution du quiz à sa création sont au nombre de 3 :
 ### QCM / QCU
 C'est une question à choix multiples ou choix unique. Le rendu est le même pour ces deux catégories de questions.
 Le fomrulaire de création est donc identique.
-Par défaut, 4 proposition sont proposées d'emblée au remplissage, mais il est possible d'en ajouter des supplémentaires avec un bouton prévu à cet effet.
+Par défaut, 4 propositions sont disponibles d'emblée à la saisie, mais il est possible d'en ajouter des supplémentaires avec un bouton prévu à cet effet.
 
 ![Formulaire QCM/U](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-QCM.png)
 
