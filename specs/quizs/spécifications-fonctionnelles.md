@@ -90,18 +90,20 @@ La liste affiche les attributs suivants :
 - lien vers le détail de ses réponses 
 - lien vers un traitement de suppression 
 
-[![Ecran de liste des sessions](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/liste-sessions.png)]
+![Ecran de liste des sessions](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/liste-sessions.png)
 
 ## Calcul et gestion des scores
-Afin de ne pas encourager la triche (!) il n'est pas possible d'obtenir le score maximum si l'on coches toutes les réponses à une question. Le calcul du score se fait donc en ajoutant des pondérations en fonction du nombre de réponses faites par rapport au nombre deréponses attendues.
+Le score est un taux de réussite. Il borné et peut aller de 0 à 100%.
+
+Afin de ne pas encourager la triche (!) il n'est pas possible d'obtenir le score maximum si l'on coche toutes les réponses à une question. Le calcul du score se fait donc en ajoutant des pondérations en fonction du nombre de réponses faites par rapport au nombre de réponses attendues.
 
 ### Pour une question
 
 ### score global
 
 ### Affichage
-
-
+L'affichage se fait donc sous forme d'une jauge variant entre 0 et 100%.
+L'arrondi est à l'unité. Pas de virgule.
 
 ## Intégration à la gestion documentaire
 
@@ -136,12 +138,19 @@ Afin de ne pas encourager la triche (!) il n'est pas possible d'obtenir le score
 
   - Angular JS
 
+## Reprise de données
+Il faudra re-importer les données des quizs dans la nouvelle structure de base de données. L'extraction des données de l'ancienne base est _à la charge d'ERASME_, elle sera faite au format qui convient le mieux pour permettre une intégration facile dans la nouvelle structure de base de données (JSON ? Insert SQL ?).
+
 ## Résumé des règles fonctionnelles
 
 1. Il y a 3 types de questions QCM/QCU, Appariement, Textes à trous
 2. Tout utilisateur peut avoir une session de quiz.
 3. Seules les sessions des élèves sont conservées.
 4. Les sessions des élèves sur un quiz donné sont consultables/gérables par le prof qui leur a publié.
-5. Le mélange des questions est effectué à l'initialisation de la session.
-6. Le score la question est affiché sur l'écran de correction si celle-ci n'est pas masquée *&* qu'elle intervvient après chaque question.
-7. On peut revenir en arrière sur le quiz *que* si son paramétrage nous l'autorise.
+5. Il est possible de détruire une session de Quiz pour le prof qui a publier le quiz.
+6. Le mélange des questions est effectué à l'initialisation de la session.
+7. Le score la question est affiché sur l'écran de correction si celle-ci n'est pas masquée *&* qu'elle intervvient après chaque question.
+8. On peut revenir en arrière sur le quiz *que* si son paramétrage nous l'autorise.
+9. Le score est un pourcentage sous forme d'entier.
+
+
