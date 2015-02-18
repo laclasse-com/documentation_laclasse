@@ -75,22 +75,27 @@ Les modes d'exécution du quiz à sa créationsont au nombre de 3 :
 ### Textes à trous
 
 
-## Partager un Quiz
-
-
-## Récupérer/copier un Quiz
-
-
-
 ## Examiner les sessions
+L'examen des sessions permet au prof de voir la progression de ses élèves sur les quizs qu'ils leur a publiés.
+L'écran d'examen des sessions est une liste classée par ordre alphabétique de toutes les sessions regroupées par élève, liées à un quiz dans une classe.
+Les paramètres d'entrée est donc l'identifiant du quiz, et celui de le classe.
+Depuis cette IHM il doit être possible d'accéder au détail des réponses de chaque session de quiz d'un élève.
 
 ### Liste des sessions
+La liste affiche les attributs suivants :
+
+- nom et prénom de l'élève
+- date et heure de la session
+- score obtenu 
+- lien vers le détail de ses réponses 
+- lien vers un traitement de suppression |
 
 #### Liste d'une classe
 
 #### Liste d'un élève
 
 ## Calcul et gestion des scores
+Afin de ne pas encourager la triche (!) il n'est pas possible d'obtenir le score maximum si l'on coches toutes les réponses à une question. Le calcul du score se fait donc en ajoutant des pondérations en fonction du nombre de réponses faites par rapport au nombre deréponses attendues.
 
 ### Pour une question
 
@@ -110,7 +115,12 @@ Les modes d'exécution du quiz à sa créationsont au nombre de 3 :
 
 ### publier un quiz
 
-### examiner les sessions
+### Examiner les sessions
+
+### Partager un Quiz
+
+### Récupérer/copier un Quiz
+
 
 
 ## Cadre technique
