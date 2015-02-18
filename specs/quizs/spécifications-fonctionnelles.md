@@ -77,6 +77,7 @@ Les modes d'exécution du quiz à sa création sont au nombre de 3 :
 C'est une question à choix multiples ou choix unique. Le rendu est le même pour ces deux catégories de questions.
 Le fomrulaire de création est donc identique.
 Par défaut, 4 proposition sont proposées d'emblée au remplissage, mais il est possible d'en ajouter des supplémentaires avec un bouton prévu à cet effet.
+
 ![Formulaire QCM/U](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-QCM.png)
 
 ### Appariements
