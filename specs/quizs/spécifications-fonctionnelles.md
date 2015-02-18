@@ -2,6 +2,12 @@
 # Spécifications fonctionnelles
 
 ## Introduction
+Le module de s en ligne est un composant de l'ancienne version de laclasse.com. Il doit être ré-écrit pour la version 3.
+Ce module comporte 3 points d'entrées : 
+	- L'exécution des quizs
+	- La création/modification (back-office)
+	- L'examen des sessions et résultats des élèves.
+Il sera ré-écrit quasiment à iso-fonctionnalité de la version existante, en ajoutant toutefois la prise en charge des contenus multimédia (Audio, Images, Vidéos) dans les questions, les éléments de réponse et les points de corrections.
 
 ## Exécuter/Jouer un Quiz
 ### IHM
