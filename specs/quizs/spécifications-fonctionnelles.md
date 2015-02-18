@@ -85,7 +85,7 @@ Par défaut, 4 propositions sont disponibles d'emblée à la saisie, mais il est
 ![Formulaire Appariement](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-appariements.png)
 
 ### Textes à trous
-
+![Formulaire Textes à trous](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-TAT.png.png)
 
 ## Examiner les sessions
 L'examen des sessions permet au prof de voir la progression de ses élèves sur les quizs qu'ils leur a publiés.
