@@ -95,5 +95,6 @@ Les des questions sont au nombre de 3 :
 ## Résumé des règles fonctionnelles
 
 1. Il y a 3 types de questions QCM/QCU, Appariement, Textes à trous
-2. Seules les sessions des élèves sont enregistrée
-3. Les sessions des élèves sur un quiz donné sont consultables/gérables par le prof qui leur a publié.
+2. Tout utilisateur peut avoir une session de quiz.
+3. Seules les sessions des élèves sont conservées.
+4. Les sessions des élèves sur un quiz donné sont consultables/gérables par le prof qui leur a publié.
