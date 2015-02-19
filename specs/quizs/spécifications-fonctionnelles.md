@@ -112,11 +112,13 @@ Afin de ne pas encourager la triche (!) il n'est pas possible d'obtenir le score
 ### Pour une question
 La règle de calcul s'appliquant est donc la suivante : 
 ```
-Score pour la question = ( nb de réponses justes - ( nb de réponses fausses ) / 2 ) / nb de bonnes réponses attendues pour la question;
+                          ( nb de réponses justes - ( nb de réponses fausses ) / 2 ) 
+Score pour la question =  -----------------------------------------------------------
+                                nb de bonnes réponses attendues pour la question
 ```
 On voit ici qu plus il y a de réponses fausses plus le score est bas, s'il est négatif, il est ajusté à 0.
 
-### score global
+### Pour le quiz
 Le score global est la somme des scores de chaque question au prorata du nombre de questions, sans coéfficient particulier.
 
 ### Affichage
@@ -124,27 +126,28 @@ L'affichage se fait donc sous forme d'une jauge variant entre 0 et 100%.
 L'arrondi est à l'unité. Pas de virgule.
 
 ## Intégration à la gestion documentaire
-La manipulation des quiz se fera via la gestion documentaire. Le quiz doit être considéré comme un document particulier, mais entrant dans le workflow de la GED.
-Cette intégration permet le partage des documents, ainsi qu'une gestion des droits simple et héritée de la GED.
+La manipulation des quizs se fera via la gestion documentaire. Le quiz doit être considéré comme un document particulier entrant dans le workflow de la GED.
+Cette intégration facilite le partage de ces documents, ainsi que la gestion de ses droits, puisque ce sont ni plus ni moins ceux de la GED.
 
 ### Créer un quiz
-Il doit être possible à travers la GED de créer un nouveau document quiz. Ce document prend l'extension *.quiz* et a une vignette de rendu particulière.
+Il doit être possible à travers la GED de créer un nouveau document quiz. Ce document prend l'extension *.quiz* et a une vignette de présentation particulière.
 Cette implémentation est déjà en place dans la version actuelle de la GED.
 
 ### Editer un quiz
-Un clic droit sur le document *.quiz* (ou un clic dans le menu après séelction d'un document de *.quiz*), ouvre une nouvelle fenêtre permettant d'éditer le quiz back-office de gréation/modification.
+Un clic droit sur le document *.quiz* (ou un clic dans le menu après séelction d'un document de *.quiz*), ouvre une nouvelle fenêtre permettant d'éditer le quiz back-office de création/modification.
+Cette implémentation est déjà en place dans la version actuelle de la GED.
 
 ### publier un quiz
-L'action de publication est simplement le fait de glisser/déplacer ou copier/coller le document *.quiz* dans un espace partagé.
+L'action de publication est simplement le fait de glisser/déplacer ou copier/coller le document *.quiz* dans un espace partagé. 
+Cette implémentation fonctionne déjàpour tous les types de documents gérés par la version actuelle de la GED.
 
 ### Examiner les sessions
-L'examen des sessions sera accessible depuis le menu contextuel (clic droit sur le document de type *.quiz*) ou depluis le menu de l'application GED.
-
-### Partager un Quiz
+L'examen des sessions sera accessible depuis le menu contextuel (clic droit sur le document de type *.quiz*) ou depluis le menu de l'application GED. 
 
 ### Récupérer/copier un Quiz
-Il est intéressant de pouvoir dupplique un quiz pour le modifier et l'adapater à ses élèves. Une option du menu contexuel de la GED devra permettre cela. 
-Lorsqu'elle est utilisé, cette option crée une copie du quiz en affectant l'utilisateur en cours de manipulation comme auteur de ce nouveau quiz. Cela lui permet d'amender le-dit quiz sans pour antant changer le quiz source qui peut avoir été publié, sur lequel il peut y avoir des sessions en cours ou terminée.
+Il est intéressant de pouvoir duppliquer un quiz issu d'un espace partagé pour le modifier et l'adapater à ses élèves sans que cela n'affecte le quiz source. Cela permet d'amender le-dit quiz sans pour antant changer le quiz source partagé, sur lequel il peut y avoir des sessions en cours ou terminées.
+Une option du menu contexuel de la GED, associé au document, ainsi q'une option dans la barrede  menu de l'outil GED, devront permettre cela. 
+Lorsqu'elle est utilisé, cette option crée une copie du quiz en affectant l'utilisateur en cours de manipulation comme auteur de ce nouveau quiz. 
 
 ## Cadre technique
 
