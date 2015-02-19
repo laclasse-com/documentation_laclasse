@@ -107,11 +107,17 @@ La liste affiche les attributs suivants :
 ## Calcul et gestion des scores
 Le score est un taux de réussite. Il borné et peut aller de 0 à 100%.
 
-Afin de ne pas encourager la triche (!) il n'est pas possible d'obtenir le score maximum si l'on coche toutes les réponses à une question. Le calcul du score se fait donc en ajoutant des pondérations en fonction du nombre de réponses faites par rapport au nombre de réponses attendues.
+Afin de ne pas encourager la triche (!) il n'est pas possible d'obtenir le score maximum si l'on coche toutes les réponses à une question. Le calcul du score se fait donc en pondérant le nombre de réponses faites justes et fausses par rapport au nombre de réponses attendues.
 
 ### Pour une question
+La règle de calcul s'appliquant est donc la suivante : 
+```
+Score pour la question = ( nb de réponses justes - ( nb de réponses fausses ) / 2 ) / nb de bonnes réponses attendues pour la question;
+```
+On voit ici qu plus il y a de réponses fausses plus le score est bas, s'il est négatif, il est ajusté à 0.
 
 ### score global
+Le score global est la somme des scores de chaque question, sans coéfficient particulier.
 
 ### Affichage
 L'affichage se fait donc sous forme d'une jauge variant entre 0 et 100%.
