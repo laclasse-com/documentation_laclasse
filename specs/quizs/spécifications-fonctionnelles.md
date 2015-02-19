@@ -151,16 +151,18 @@ Lorsqu'elle est utilisé, cette option crée une copie du quiz en affectant l'ut
 
 ## Cadre technique
 
-### Serveur
+### Développements
+
+#### Serveur
 
   - Sinatra
   - Ruby
 
-### Backend
+#### Backend
 
   - Mysql
 
-### Client
+#### Client
 
   - Angular JS
 
