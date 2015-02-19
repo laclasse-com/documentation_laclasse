@@ -117,29 +117,34 @@ Score pour la question = ( nb de réponses justes - ( nb de réponses fausses ) 
 On voit ici qu plus il y a de réponses fausses plus le score est bas, s'il est négatif, il est ajusté à 0.
 
 ### score global
-Le score global est la somme des scores de chaque question, sans coéfficient particulier.
+Le score global est la somme des scores de chaque question au prorata du nombre de questions, sans coéfficient particulier.
 
 ### Affichage
 L'affichage se fait donc sous forme d'une jauge variant entre 0 et 100%.
 L'arrondi est à l'unité. Pas de virgule.
 
 ## Intégration à la gestion documentaire
-
-### L'extension `.quiz`
+La manipulation des quiz se fera via la gestion documentaire. Le quiz doit être considéré comme un document particulier, mais entrant dans le workflow de la GED.
+Cette intégration permet le partage des documents, ainsi qu'une gestion des droits simple et héritée de la GED.
 
 ### Créer un quiz
+Il doit être possible à travers la GED de créer un nouveau document quiz. Ce document prend l'extension *.quiz* et a une vignette de rendu particulière.
+Cette implémentation est déjà en place dans la version actuelle de la GED.
 
 ### Editer un quiz
+Un clic droit sur le document *.quiz* (ou un clic dans le menu après séelction d'un document de *.quiz*), ouvre une nouvelle fenêtre permettant d'éditer le quiz back-office de gréation/modification.
 
 ### publier un quiz
+L'action de publication est simplement le fait de glisser/déplacer ou copier/coller le document *.quiz* dans un espace partagé.
 
 ### Examiner les sessions
+L'examen des sessions sera accessible depuis le menu contextuel (clic droit sur le document de type *.quiz*) ou depluis le menu de l'application GED.
 
 ### Partager un Quiz
 
 ### Récupérer/copier un Quiz
-
-
+Il est intéressant de pouvoir dupplique un quiz pour le modifier et l'adapater à ses élèves. Une option du menu contexuel de la GED devra permettre cela. 
+Lorsqu'elle est utilisé, cette option crée une copie du quiz en affectant l'utilisateur en cours de manipulation comme auteur de ce nouveau quiz. Cela lui permet d'amender le-dit quiz sans pour antant changer le quiz source qui peut avoir été publié, sur lequel il peut y avoir des sessions en cours ou terminée.
 
 ## Cadre technique
 
@@ -159,7 +164,7 @@ L'arrondi est à l'unité. Pas de virgule.
 ## Reprise de données
 Il faudra re-importer les données des quizs dans la nouvelle structure de base de données. L'extraction des données de l'ancienne base est _à la charge d'ERASME_, elle sera faite au format qui convient le mieux pour permettre une intégration facile dans la nouvelle structure de base de données (JSON ? Insert SQL ?).
 
-## Résumé des règles fonctionnelles
+## Résumé des règles fonctionnelles importantes
 
 1. Il y a 3 types de questions QCM/QCU, Appariement, Textes à trous
 2. Tout utilisateur peut avoir une session de quiz.
@@ -170,5 +175,7 @@ Il faudra re-importer les données des quizs dans la nouvelle structure de base 
 7. Le score la question est affiché sur l'écran de correction si celle-ci n'est pas masquée *&* qu'elle intervvient après chaque question.
 8. On peut revenir en arrière sur le quiz *que* si son paramétrage nous l'autorise.
 9. Le score est un pourcentage sous forme d'entier.
+10. Score pour la question = ( nb de réponses justes - ( nb de réponses fausses ) / 2 ) / nb de bonnes réponses attendues pour la question;
+11. Le score global est la somme des scores de chaque question au prorata du nombre de questions, sans coéfficient particulier.
 
 
