@@ -79,13 +79,13 @@ C'est une question à choix multiples ou choix unique. Le rendu est le même pou
 Le fomrulaire de création est donc identique.
 Par défaut, 4 propositions sont disponibles d'emblée à la saisie, mais il est possible d'en ajouter des supplémentaires avec un bouton prévu à cet effet.
 
-![Formulaire QCM/U](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-QCM.png)
+![Formulaire QCM/U](./images/form-QCM.png?raw=true)
 
 ### Appariements
-![Formulaire Appariement](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-appariements.png)
+![Formulaire Appariement](./images/form-appariements.png)
 
 ### Textes à trous
-![Formulaire Textes à trous](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/form-TAT.png.png)
+![Formulaire Textes à trous](./images/form-TAT.png.png)
 
 ## Examiner les sessions
 L'examen des sessions permet au prof de voir la progression de ses élèves sur les quizs qu'ils leur a publiés.
@@ -102,7 +102,7 @@ La liste affiche les attributs suivants :
 - lien vers le détail de ses réponses 
 - lien vers un traitement de suppression 
 
-![Ecran de liste des sessions](https://raw.githubusercontent.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/liste-sessions.png)
+![Ecran de liste des sessions](./images/liste-sessions.png)
 
 ## Calcul et gestion des scores
 Le score est un taux de réussite. Il borné et peut aller de 0 à 100%.
