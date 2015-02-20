@@ -80,12 +80,21 @@ Le fomrulaire de création est donc identique.
 Par défaut, 4 propositions sont disponibles d'emblée à la saisie, mais il est possible d'en ajouter des supplémentaires avec un bouton prévu à cet effet.
 
 ![Formulaire QCM/U](./images/form-QCM.png?raw=true)
+form-QCM.png
 
 ### Appariements
+Il s'agit d'un mode de questions permettant d'associer plusieurs propositions d'un premier groupe à plusieurs proposition d'un second.
+A l'instar du QCM, l'interface de création propose 4 emplacements pour chaque groupe de propositions. un bouton permet d'ajouter des propositions supplémentaires.
+
 ![Formulaire Appariement](./images/form-appariements.png)
+form-appariements.png
 
 ### Textes à trous
+Ce sont des textes dans lequels certains mots doivent être complétés par l'élèves. Ces mots sont fournis par une liste fermée pouvant comporter des leurres, c'est-à-dire des réponses fausses.
+La liste fermée seprésente sous forme d'une selectbox constituée de la liste dédoublonnée de tous les mots manquants du textes à laquelle s'ajoute la liste des leurres. Cette liste est ensuite triée par ordre alphabétique.
+
 ![Formulaire Textes à trous](./images/form-TAT.png.png)
+form-TAT.png.png
 
 ## Examiner les sessions
 L'examen des sessions permet au prof de voir la progression de ses élèves sur les quizs qu'ils leur a publiés.
