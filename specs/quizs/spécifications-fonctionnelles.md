@@ -74,7 +74,7 @@ Les modes d'exécution du quiz à sa création sont au nombre de 3 :
 - L'aide
 - Le commentaire de correction
 - 
-### QCM / QCU
+### Les QCM / QCU
 C'est une question à choix multiples ou choix unique. Le rendu est le même pour ces deux catégories de questions.
 Le fomrulaire de création est donc identique.
 Par défaut, 4 propositions sont disponibles d'emblée à la saisie, mais il est possible d'en ajouter des supplémentaires avec un bouton prévu à cet effet.
@@ -82,14 +82,14 @@ Par défaut, 4 propositions sont disponibles d'emblée à la saisie, mais il est
 ![Formulaire QCM/U](./images/form-QCM.png?raw=true)
 form-QCM.png
 
-### Appariements
+### Les appariements ou associations
 Il s'agit d'un mode de questions permettant d'associer plusieurs propositions d'un premier groupe à plusieurs proposition d'un second.
 A l'instar du QCM, l'interface de création propose 4 emplacements pour chaque groupe de propositions. un bouton permet d'ajouter des propositions supplémentaires.
 
 ![Formulaire Appariement](./images/form-appariements.png)
 form-appariements.png
 
-### Textes à trous
+### Les textes à trous
 Ce sont des textes dans lequels certains mots doivent être complétés par l'élèves. Ces mots sont fournis par une liste fermée pouvant comporter des leurres, c'est-à-dire des réponses fausses.
 La liste fermée seprésente sous forme d'une selectbox constituée de la liste dédoublonnée de tous les mots manquants du textes à laquelle s'ajoute la liste des leurres. Cette liste est ensuite triée par ordre alphabétique.
 
