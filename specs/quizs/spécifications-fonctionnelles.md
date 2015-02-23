@@ -86,10 +86,8 @@ form-QCM.png
 Il s'agit d'un mode de questions permettant d'associer plusieurs propositions d'un premier groupe à plusieurs proposition d'un second.
 A l'instar du QCM, l'interface de création propose 4 emplacements pour chaque groupe de propositions. un bouton permet d'ajouter des propositions supplémentaires.
 
-![Formulaire Appariement](./images/form-appariements.png)
+![Formulaire Appariement](./images/form-appariements.png?raw=true)
 form-appariements.png
-[a relative link to image](images/form-appariements.png?raw=true)
-[a relative link to image](form-appariements.png?raw=true)
 
 ### Les textes à trous
 Ce sont des textes dans lequels certains mots doivent être complétés par l'élèves. Ces mots sont fournis par une liste fermée pouvant comporter des leurres, c'est-à-dire des réponses fausses.
