@@ -88,7 +88,8 @@ A l'instar du QCM, l'interface de création propose 4 emplacements pour chaque g
 
 ![Formulaire Appariement](./images/form-appariements.png)
 form-appariements.png
-[a relative link to image](form-appariements.png)
+[a relative link to image](images/form-appariements.png?raw=true)
+[a relative link to image](form-appariements.png?raw=true)
 
 ### Les textes à trous
 Ce sont des textes dans lequels certains mots doivent être complétés par l'élèves. Ces mots sont fournis par une liste fermée pouvant comporter des leurres, c'est-à-dire des réponses fausses.
