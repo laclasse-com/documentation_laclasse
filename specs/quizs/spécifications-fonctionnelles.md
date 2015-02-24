@@ -160,10 +160,15 @@ form-TAT.png.png
 L'action de publier un quiz représente la mise à disposition de cet exercie pour un groupe d'élèves (classes ou regroupements).
 Cette action propose donc de choisir la ou les classes/groupes concerner puis une date de début et de fin de publication.
 
+Lors de la mise à disposition pour les élèves, l'application utilisera les API de notification de l'application de publipostage, si celle-ci est activée, pour notifier dans le flux de news du portailles élèves des groupes concernés par la publication.
+
+![images/publication-quiz.png](./images/publication-quiz.png)
+
 #### Partage de quiz
 
 #### Récupérer/copier un Quiz
 Il est intéressant de pouvoir duppliquer un quiz partagé pour le modifier et l'adapater à ses élèves sans que cela n'affecte le quiz source. Cela permet d'amender le-dit quiz sans pour antant changer le quiz source partagé, sur lequel il peut y avoir des sessions en cours ou terminées.
+Cette action effectue une dupplication complèete en base de données du quiz choisi, sauf les sessions.
 
 ## Cadre technique
 
