@@ -67,6 +67,7 @@ On voit ici qu plus il y a de réponses fausses plus le score est bas, s'il est 
 
 #### Pour le quiz
 Le score global est la somme des scores de chaque question au prorata du nombre de questions, sans coéfficient particulier.
+Le calcul du score est identique que le quiz ait été complété jusqu'à la dernière question ou pas.
 
 #### Affichage
 L'affichage se fait donc sous forme d'une jauge variant entre 0 et 100%.
@@ -216,7 +217,8 @@ Il faudra re-importer les données des quizs dans la nouvelle structure de base 
 9. Le score est un pourcentage sous forme d'entier.
 10. Score pour la question = ( nb de réponses justes - ( nb de réponses fausses ) / 2 ) / nb de bonnes réponses attendues pour la question;
 11. Le score global est la somme des scores de chaque question au prorata du nombre de questions, sans coéfficient particulier.
-12. Un quiz publié apparaît dans pendant fenêtre de publcation (date de débu et de fin)
-13. Les sessions des élèves ne disparraissent pas lorsqu'un quiz cesse d'être dans l'intervalle de publication.
+12. Le calcul du score est identique que le quiz ait été complété jusqu'à la dernière question ou pas.
+13. Un quiz publié apparaît dans pendant fenêtre de publcation (date de débu et de fin)
+14. Les sessions des élèves ne disparraissent pas lorsqu'un quiz cesse d'être dans l'intervalle de publication.
 
 
