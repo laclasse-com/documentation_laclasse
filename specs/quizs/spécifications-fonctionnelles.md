@@ -137,29 +137,17 @@ Le score global est la somme des scores de chaque question au prorata du nombre 
 L'affichage se fait donc sous forme d'une jauge variant entre 0 et 100%.
 L'arrondi est à l'unité. Pas de virgule.
 
-## Intégration à la gestion documentaire
-La manipulation des quizs se fera via la gestion documentaire. Le quiz doit être considéré comme un document particulier entrant dans le workflow de la GED.
-Cette intégration facilite le partage de ces documents, ainsi que la gestion de ses droits, puisque ce sont ni plus ni moins ceux de la GED.
+## Intégration dans le portail
+L'application quiz doit être indépendante du reste afin de respecter les critères de simplicité voulus pour cette version 3 de l'ENT.
+Aussi son point d'entrée se fait par le portail par un carré approprié.
+Cela permet de mettre en valeur ce module et et d'en proposer une utilisation indépendante de le GED.
 
-### Créer un quiz
-Il doit être possible à travers la GED de créer un nouveau document quiz. Ce document prend l'extension *.quiz* et a une vignette de présentation particulière.
-Cette implémentation est déjà en place dans la version actuelle de la GED.
+### Publication d'un quiz / notification des élèves
 
-### Editer un quiz
-Un clic droit sur le document *.quiz* (ou un clic dans le menu après séelction d'un document de *.quiz*), ouvre une nouvelle fenêtre permettant d'éditer le quiz back-office de création/modification.
-Cette implémentation est déjà en place dans la version actuelle de la GED.
-
-### publier un quiz
-L'action de publication est simplement le fait de glisser/déplacer ou copier/coller le document *.quiz* dans un espace partagé. 
-Cette implémentation fonctionne déjàpour tous les types de documents gérés par la version actuelle de la GED.
-
-### Examiner les sessions
-L'examen des sessions sera accessible depuis le menu contextuel (clic droit sur le document de type *.quiz*) ou depluis le menu de l'application GED. 
+### Partage de quiz
 
 ### Récupérer/copier un Quiz
-Il est intéressant de pouvoir duppliquer un quiz issu d'un espace partagé pour le modifier et l'adapater à ses élèves sans que cela n'affecte le quiz source. Cela permet d'amender le-dit quiz sans pour antant changer le quiz source partagé, sur lequel il peut y avoir des sessions en cours ou terminées.
-Une option du menu contexuel de la GED, associé au document, ainsi q'une option dans la barrede  menu de l'outil GED, devront permettre cela. 
-Lorsqu'elle est utilisé, cette option crée une copie du quiz en affectant l'utilisateur en cours de manipulation comme auteur de ce nouveau quiz. 
+Il est intéressant de pouvoir duppliquer un quiz partagé pour le modifier et l'adapater à ses élèves sans que cela n'affecte le quiz source. Cela permet d'amender le-dit quiz sans pour antant changer le quiz source partagé, sur lequel il peut y avoir des sessions en cours ou terminées.
 
 ## Cadre technique
 
