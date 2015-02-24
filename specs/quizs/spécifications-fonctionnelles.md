@@ -142,6 +142,20 @@ L'application quiz doit être indépendante du reste afin de respecter les crit�
 Aussi son point d'entrée se fait par le portail par un carré approprié.
 Cela permet de mettre en valeur ce module et et d'en proposer une utilisation indépendante de le GED.
 
+![images/intégration-portail.png](./images/intégration-portail.png)
+
+### Point d'entrée Profs / PEN
+Le point d'entrée Prof propose un écran qui montre la liste de ses quizs, avec la possibilité d'en créer un nouveau, d'examiner les sessions des élèves, de partager, de publier aux élèves, de supprimer.
+Des widgets lui montrent :
+
+- la liste des nouvelles sessions depuis sa dernière connexion, limitée à 5 éléments.
+- La liste des nouveaux partages des autres profs limitée à 5 éléments, avec la possibilité de récupérer le quiz (duppliquer et s'approprier le quiz).
+
+Pour éliminer un élément de cette liste, le geste de "glisser vers la gauche" sera utilisé. Ce geste permet de faire dispaaître un élément et de raffraichir la liste avec des  nouveaux éléments non encore affichés.
+
+![images/point-d-entree-prof.png](./images/point-d-entree-prof.png)
+
+
 ### Publication d'un quiz / notification des élèves
 
 ### Partage de quiz
