@@ -146,8 +146,7 @@ A l'instar du QCM, l'interface de création propose 4 emplacements pour chaque g
 ![Formulaire Appariement](./images/form-appariements.png)
 form-appariements.png
 
-
-![Formulaire Appariement](https://github.com/laclasse-com/documentation_laclasse/specs-quiz/specs/quizs/images/form-appariements.png)
+Le bouton "ajouter une proposition" permet d'afficher 2 champs supplémentaire (un à gauche et un à droite). Seuls les champs non vides sont pris en compte à la validation.
 
 3. Les textes à trous
 Ce sont des textes dans lequels certains mots doivent être complétés par l'élèves. Ces mots sont fournis par une liste fermée pouvant comporter des leurres, c'est-à-dire des réponses fausses.
