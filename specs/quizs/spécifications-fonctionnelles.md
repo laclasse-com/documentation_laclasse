@@ -144,30 +144,37 @@ Les modes d'exécution du quiz à sa création sont au nombre de 3 :
 | Validation   | Y | N | N | N | N |
 
 #### Choix du type de question
-##### Données communes à tous les types de questions.
-- Le libellé
+##### Données communes à tous les types de questions :
 - La question
 - L'aide
 - Le commentaire de correction
+- le type de question.
+La première partie de l'écran est dédiée aux données communes sauf commentaire de correction, la deuxième partie du formualire, spécifique à un type de question, n'est affichée que lorsque ce type est choisi par l'utilisateur.
+La troisième partie du formulaire est aussi commune à tous les types de question puisqu'elle contient le commentaire de correction.
 
-1. Les QCM / QCU
+##### Les QCM / QCU
 C'est une question à choix multiples ou choix unique. Le rendu est le même pour ces deux catégories de questions.
 Le fomrulaire de création est donc identique.
-Par défaut, 4 propositions sont disponibles d'emblée à la saisie, mais il est possible d'en ajouter des supplémentaires avec un bouton prévu à cet effet.
+Par défaut, 8 propositions sont disponibles d'emblée à la saisie. Seuls les champs non vides sont enregistrés.
 
-![Formulaire QCM/U](./images/form-QCM.png?raw=true)
-form-QCM.png
+![images/004-ajouter-qcm_1024.png](./images/004-ajouter-qcm_1024.png)
+![images/005-ajouter-qcm2_1024.png](./images/005-ajouter-qcm2_1024.png)
 
-2. Les appariements ou associations
-Il s'agit d'un mode de questions permettant d'associer plusieurs propositions d'un premier groupe à plusieurs proposition d'un second.
-A l'instar du QCM, l'interface de création propose 4 emplacements pour chaque groupe de propositions. un bouton permet d'ajouter des propositions supplémentaires.
 
-![Formulaire Appariement](./images/form-appariements.png)
-form-appariements.png
+##### Les appariements ou associations
+Il s'agit d'un mode de questions permettant d'associer plusieurs propositions d'un premier groupe à plusieurs propositions d'un second.
+A l'instar du QCM, l'interface de création propose 8 emplacements pour chaque groupe de propositions. 
 
-Le bouton "ajouter une proposition" permet d'afficher 2 champs supplémentaire (un à gauche et un à droite). Seuls les champs non vides sont pris en compte à la validation.
+La création d'une association se déroule en deux temps.  On ajoute d'abord les propositions dans les deux groupes (gauche et droite).
+Il n'est pas obligatoire d'avoir le même nombre de propositions dans les 2 groupes, et seuls les champs renseignés sont enregistrés.
 
-3. Les textes à trous
+![images/007-ajouter-association2_1024.png](./images/007-ajouter-association2_1024.png)
+
+Dans un second temps, second écran, on réalise les leins entres propositions de gauche et propositions de droite.
+
+![images/008-ajouter-association3_1024.png](./images/008-ajouter-association3_1024.png)
+
+##### Les textes à trous
 Ce sont des textes dans lequels certains mots doivent être complétés par l'élèves. Ces mots sont fournis par une liste fermée pouvant comporter des leurres, c'est-à-dire des réponses fausses.
 La liste fermée seprésente sous forme d'une selectbox constituée de la liste dédoublonnée de tous les mots manquants du textes à laquelle s'ajoute la liste des leurres. Cette liste est ensuite triée par ordre alphabétique.
 
