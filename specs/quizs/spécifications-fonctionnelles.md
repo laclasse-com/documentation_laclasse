@@ -26,6 +26,7 @@ Elle devra être compatible avec les tablettes (responsive design, ergonomie ada
 
 ### Exécuter/Jouer un Quiz
 Il s'agit de l'interface de visualisation ou de rendu d'un Quiz, qui permet de l'exécuter.
+Le quiz se déroule question après question, une par page, la validation du formulaire d'une question entraîne le passage à la question suivante, avec selon le paramétrage du quiz, un possibilité de retour en arrière ou pas, un affichage ou pas de la correction, et du score pour la question.
 	
 ### Gestion des sessions
 Une session représente le fait qu'un utilisateur est en train d'exécuter le quiz. Elle démarre au lancement du quiz et se termine lorsque l'utilisateur le quitte, qu'il soit arrivé à la fin ou pas.
@@ -79,6 +80,23 @@ Aussi son point d'entrée se fait par le portail par un carré approprié.
 Cela permet de mettre en valeur ce module et et d'en proposer une utilisation indépendante de le GED.
 
 ![images/intégration-portail.png](./images/intégration-portail.png)
+
+### Gestion de la correction
+La correction peut être affichée après l'exécution de chaque question ou à la fin du déroulement du quiz, selon le paramétrage qui a été fait.
+Les écrans de corrections sont bien évidemment en lecture seule.
+
+#### Correction QCM
+
+![images/020-correction-qcm_1024.png](./images/020-correction-qcm_1024.png)
+
+#### Correction textes à trous
+
+![images/022-correction-txt-trous_1024.png](./images/022-correction-txt-trous_1024.png)
+
+#### Correction Associations.
+
+![images/021-correction-association_1024.png](./images/021-correction-association_1024.png)
+
 
 ### Point d'entrée Profs / PEN
 Le point d'entrée Prof propose un écran qui montre la liste de ses quizs, avec la possibilité d'en créer un nouveau, d'examiner les sessions des élèves, de partager, de publier aux élèves, de supprimer.
