@@ -28,6 +28,10 @@ Elle devra être compatible avec les tablettes (responsive design, ergonomie ada
 Il s'agit de l'interface de visualisation ou de rendu d'un Quiz, qui permet de l'exécuter.
 Le quiz se déroule question après question, une par page, la validation du formulaire d'une question entraîne le passage à la question suivante, avec selon le paramétrage du quiz, un possibilité de retour en arrière ou pas, un affichage ou pas de la correction, et du score pour la question.
 	
+```
+Ici illustration execution de aquiz
+```
+
 ### Gestion des sessions
 Une session représente le fait qu'un utilisateur est en train d'exécuter le quiz. Elle démarre au lancement du quiz et se termine lorsque l'utilisateur le quitte, qu'il soit arrivé à la fin ou pas.
 
@@ -38,19 +42,26 @@ Les sessions des autres utilisateurs que les élèves sont détruites un fois te
 #### Examiner les sessions
 L'examen des sessions permet au prof de voir la progression de ses élèves sur les quizs qu'ils leur a publiés.
 L'écran d'examen des sessions est une liste classée par ordre alphabétique de toutes les sessions regroupées par élève, liées à un quiz dans une classe.
-Les paramètres d'entrée est donc l'identifiant du quiz, et celui de le classe.
+Le paramètre d'entrée est donc l'identifiant du quiz.
 Depuis cette IHM il doit être possible d'accéder au détail des réponses de chaque session de quiz d'un élève.
 
 #### Liste des sessions
+Cette liste contient antant de lignes que de sessions de quiz réalisées par chaque élève.
 La liste affiche les attributs suivants :
 
-- nom et prénom de l'élève
+- nom et prénom de l'élève, classe
 - date et heure de la session
-- score obtenu 
-- lien vers le détail de ses réponses 
-- lien vers un traitement de suppression 
+- score obtenu affiché graphiquement
+- lien vers le détail de ses réponses (sur la ligne complète )
+- lien vers un traitement de suppression de la session (non affiché sur le mockup mais nécessaire, sur la droite )
 
-![Ecran de liste des sessions](./images/liste-sessions.png)
+![images/23-suivi-resultats-eleves_1024.png](./images/23-suivi-resultats-eleves_1024.png)
+
+Un filtre permet de réduire la liste des données affichées selon les critères suivants :
+ - Derniers résultats (les + récents)
+ - Premiers résultats (les + anciens)
+ - Selection d'une classe
+
 
 ### Calcul et gestion des scores
 Le score est un taux de réussite. Il borné et peut aller de 0 à 100%.
