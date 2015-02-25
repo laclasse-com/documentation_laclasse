@@ -176,10 +176,9 @@ Dans un second temps, second écran, on réalise les leins entres propositions d
 
 ##### Les textes à trous
 Ce sont des textes dans lequels certains mots doivent être complétés par l'élèves. Ces mots sont fournis par une liste fermée pouvant comporter des leurres, c'est-à-dire des réponses fausses.
-La liste fermée seprésente sous forme d'une selectbox constituée de la liste dédoublonnée de tous les mots manquants du textes à laquelle s'ajoute la liste des leurres. Cette liste est ensuite triée par ordre alphabétique.
+La liste fermée représente sous forme d'une selectbox constituée de la liste dédoublonnée de tous les mots manquants du textes à laquelle s'ajoute la liste des leurres. Cette liste est ensuite triée par ordre alphabétique.
 
-![Formulaire Textes à trous](./images/form-TAT.png.png)
-form-TAT.png.png
+![images/011-ajouter-texte-trous2_1024.png](./images/011-ajouter-texte-trous2_1024.png)
 
 #### Publication d'un quiz / notification des élèves
 L'action de publier un quiz représente la mise à disposition de cet exercice pour un groupe d'élèves (classes ou regroupements).
