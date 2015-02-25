@@ -30,27 +30,27 @@ Le quiz se déroule question après question, une par page, la validation du for
 
 Le premier écran récapitule le paramétrage du quiz pour préciser à l'élève dans quelles conditions il va travailler.
 
-![images/014-reponse-quizs-lancement.png](./images/014-reponse-quizs-lancement.png)
+![images/014-reponse-quizs-lancement.jpg](./images/014-reponse-quizs-lancement.jpg)
 
 #### Rendu des QCM
 
-![images/015-reponse-quiz-qcm.png](./images/015-reponse-quiz-qcm.png)
+![images/015-reponse-quiz-qcm.jpg](./images/015-reponse-quiz-qcm.jpg)
 
 #### Rendu des associations
 
-![images/016-reponse-quiz-association.png](./images/016-reponse-quiz-association.png)
+![images/016-reponse-quiz-association.jpg](./images/016-reponse-quiz-association.jpg)
 
 Tous les fichiers multimédia sont affichés en fenêtre modale.
 
-![images/017-reponse-quiz-vu-media.png](./images/017-reponse-quiz-vu-media.png)
+![images/017-reponse-quiz-vu-media.jpg](./images/017-reponse-quiz-vu-media.jpg)
 
-![images/018-reponse-quiz-association2.png](./images/018-reponse-quiz-association2.png)
+![images/018-reponse-quiz-association2.jpg](./images/018-reponse-quiz-association2.jpg)
 
 #### Rendu des textes à trous
 
 La liste des propositions de réponse (les trous) est triées dans l'ordre alphabétique.
 
-![images/019-reponse-quiz-txt-trous.png](./images/019-reponse-quiz-txt-trous.png)
+![images/019-reponse-quiz-txt-trous.jpg](./images/019-reponse-quiz-txt-trous.jpg)
 
 ### Gestion des sessions
 Une session représente le fait qu'un utilisateur est en train d'exécuter le quiz. Elle démarre au lancement du quiz et se termine lorsque l'utilisateur le quitte, qu'il soit arrivé à la fin ou pas.
@@ -75,7 +75,7 @@ La liste affiche les attributs suivants :
 - lien vers le détail de ses réponses (sur la ligne complète )
 - lien vers un traitement de suppression de la session (non affiché sur le mockup mais nécessaire, sur la droite )
 
-![images/23-suivi-resultats-eleves.png](./images/23-suivi-resultats-eleves.png)
+![images/23-suivi-resultats-eleves.jpg](./images/23-suivi-resultats-eleves.jpg)
 
 Un filtre permet de réduire la liste des données affichées selon les critères suivants :
  - Derniers résultats (les + récents)
@@ -110,7 +110,7 @@ L'application quiz doit être indépendante du reste afin de respecter les crit�
 Aussi son point d'entrée se fait par le portail par un carré approprié.
 Cela permet de mettre en valeur ce module et et d'en proposer une utilisation indépendante de le GED.
 
-![images/intégration-portail.png](./images/intégration-portail.png)
+![images/intégration-portail.jpg](./images/intégration-portail.jpg)
 
 ### Gestion de la correction
 La correction peut être affichée après l'exécution de chaque question ou à la fin du déroulement du quiz, selon le paramétrage qui a été fait.
@@ -118,15 +118,15 @@ Les écrans de corrections sont bien évidemment en lecture seule.
 
 #### Correction QCM
 
-![images/020-correction-qcm.png](./images/020-correction-qcm.png)
+![images/020-correction-qcm.jpg](./images/020-correction-qcm.jpg)
 
 #### Correction textes à trous
 
-![images/022-correction-txt-trous.png](./images/022-correction-txt-trous.png)
+![images/022-correction-txt-trous.jpg](./images/022-correction-txt-trous.jpg)
 
 #### Correction Associations.
 
-![images/021-correction-association.png](./images/021-correction-association.png)
+![images/021-correction-association.jpg](./images/021-correction-association.jpg)
 
 
 ### Point d'entrée Profs / PEN
@@ -138,7 +138,7 @@ Des widgets lui montrent :
 
 Pour éliminer un élément de cette liste, le geste de "glisser vers la gauche" sera utilisé. Ce geste permet de faire dispaaître un élément et de raffraichir la liste avec des  nouveaux éléments non encore affichés.
 
-![images/point-d-entree-prof.png](./images/point-d-entree-prof.png)
+![images/point-d-entree-prof.jpg](./images/point-d-entree-prof.jpg)
 
 #### Créer / Modifier un quiz
 Le quiz est un type de document particulier succeptible d'être manipulé dans l'application de gestion documentaire de l'ENT.
@@ -188,8 +188,8 @@ C'est une question à choix multiples ou choix unique. Le rendu est le même pou
 Le fomrulaire de création est donc identique.
 Par défaut, 8 propositions sont disponibles d'emblée à la saisie. Seuls les champs non vides sont enregistrés.
 
-![images/004-ajouter-qcm.png](./images/004-ajouter-qcm.png)
-![images/005-ajouter-qcm2.png](./images/005-ajouter-qcm2.png)
+![images/004-ajouter-qcm.jpg](./images/004-ajouter-qcm.jpg)
+![images/005-ajouter-qcm2.jpg](./images/005-ajouter-qcm2.jpg)
 
 
 ##### Les appariements ou associations
@@ -199,17 +199,17 @@ A l'instar du QCM, l'interface de création propose 8 emplacements pour chaque g
 La création d'une association se déroule en deux temps.  On ajoute d'abord les propositions dans les deux groupes (gauche et droite).
 Il n'est pas obligatoire d'avoir le même nombre de propositions dans les 2 groupes, et seuls les champs renseignés sont enregistrés.
 
-![images/007-ajouter-association2.png](./images/007-ajouter-association2.png)
+![images/007-ajouter-association2.jpg](./images/007-ajouter-association2.jpg)
 
 Dans un second temps, second écran, on réalise les leins entres propositions de gauche et propositions de droite.
 
-![images/008-ajouter-association3.png](./images/008-ajouter-association3.png)
+![images/008-ajouter-association3.jpg](./images/008-ajouter-association3.jpg)
 
 ##### Les textes à trous
 Ce sont des textes dans lequels certains mots doivent être complétés par l'élèves. Ces mots sont fournis par une liste fermée pouvant comporter des leurres, c'est-à-dire des réponses fausses.
 La liste fermée représente sous forme d'une selectbox constituée de la liste dédoublonnée de tous les mots manquants du textes à laquelle s'ajoute la liste des leurres. Cette liste est ensuite triée par ordre alphabétique.
 
-![images/011-ajouter-texte-trous2.png](./images/011-ajouter-texte-trous2.png)
+![images/011-ajouter-texte-trous2.jpg](./images/011-ajouter-texte-trous2.jpg)
 
 #### Publication d'un quiz / notification des élèves
 L'action de publier un quiz représente la mise à disposition de cet exercice pour un groupe d'élèves (classes ou regroupements).
@@ -217,7 +217,7 @@ Cette action propose donc de choisir la ou les classes/groupes concerner puis un
 
 Lors de la mise à disposition pour les élèves, l'application utilisera les API de notification de l'application de publipostage, si celle-ci est activée, pour notifier dans le flux de news du portailles élèves des groupes concernés par la publication.
 
-![images/publication-quiz.png](./images/publication-quiz.png)
+![images/publication-quiz.jpg](./images/publication-quiz.jpg)
 
 #### Partage de quiz
 L'action de partager un quiz, le rend visible des autres profs quelque soit leur établissement de rattachement (tous les profs de l'ent qui ont accès au module de quizs).
