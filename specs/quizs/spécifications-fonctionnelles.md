@@ -27,10 +27,30 @@ Elle devra être compatible avec les tablettes (responsive design, ergonomie ada
 ### Exécuter/Jouer un Quiz
 Il s'agit de l'interface de visualisation ou de rendu d'un Quiz, qui permet de l'exécuter.
 Le quiz se déroule question après question, une par page, la validation du formulaire d'une question entraîne le passage à la question suivante, avec selon le paramétrage du quiz, un possibilité de retour en arrière ou pas, un affichage ou pas de la correction, et du score pour la question.
-	
-```
-Ici illustration execution de aquiz
-```
+
+Le premier écran récapitule le paramétrage du quiz pour préciser à l'élève dans quelles conditions il va travailler.
+
+![images/014-reponse-quizs-lancement_1024.png](./images/014-reponse-quizs-lancement_1024.png)
+
+#### Rendu des QCM
+
+![images/015-reponse-quiz-qcm_1024.png](./images/015-reponse-quiz-qcm_1024.png)
+
+#### Rendu des associations
+
+![images/016-reponse-quiz-association_1024.png](./images/016-reponse-quiz-association_1024.png)
+
+Tous les fichiers multimédia sont affichés en fenêtre modale.
+
+![images/017-reponse-quiz-vu-media_1024.png](./images/017-reponse-quiz-vu-media_1024.png)
+
+![images/018-reponse-quiz-association2_1024.png](./images/018-reponse-quiz-association2_1024.png)
+
+#### Rendu des textes à trous
+
+La liste des propositions de réponse (les trous) est triées dans l'ordre alphabétique.
+
+![images/019-reponse-quiz-txt-trous_1024.png](./images/019-reponse-quiz-txt-trous_1024.png)
 
 ### Gestion des sessions
 Une session représente le fait qu'un utilisateur est en train d'exécuter le quiz. Elle démarre au lancement du quiz et se termine lorsque l'utilisateur le quitte, qu'il soit arrivé à la fin ou pas.
