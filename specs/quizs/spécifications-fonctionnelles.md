@@ -75,7 +75,7 @@ La liste affiche les attributs suivants :
 - lien vers le détail de ses réponses (sur la ligne complète )
 - lien vers un traitement de suppression de la session (non affiché sur le mockup mais nécessaire, sur la droite )
 
-![images/23-suivi-resultats-eleves.jpg](./images/23-suivi-resultats-eleves.jpg)
+![images/023-suivi-resultats-eleves.jpg](./images/023-suivi-resultats-eleves.jpg)
 
 Un filtre permet de réduire la liste des données affichées selon les critères suivants :
  - Derniers résultats (les + récents)
@@ -110,7 +110,7 @@ L'application quiz doit être indépendante du reste afin de respecter les crit�
 Aussi son point d'entrée se fait par le portail par un carré approprié.
 Cela permet de mettre en valeur ce module et et d'en proposer une utilisation indépendante de le GED.
 
-![images/intégration-portail.jpg](./images/intégration-portail.jpg)
+![images/intégration-portail.png](./images/intégration-portail.png)
 
 ### Gestion de la correction
 La correction peut être affichée après l'exécution de chaque question ou à la fin du déroulement du quiz, selon le paramétrage qui a été fait.
@@ -138,7 +138,7 @@ Des widgets lui montrent :
 
 Pour éliminer un élément de cette liste, le geste de "glisser vers la gauche" sera utilisé. Ce geste permet de faire dispaaître un élément et de raffraichir la liste avec des  nouveaux éléments non encore affichés.
 
-![images/point-d-entree-prof.jpg](./images/point-d-entree-prof.jpg)
+![images/point-d-entree-prof.png](./images/point-d-entree-prof.png)
 
 #### Créer / Modifier un quiz
 Le quiz est un type de document particulier succeptible d'être manipulé dans l'application de gestion documentaire de l'ENT.
@@ -217,7 +217,7 @@ Cette action propose donc de choisir la ou les classes/groupes concerner puis un
 
 Lors de la mise à disposition pour les élèves, l'application utilisera les API de notification de l'application de publipostage, si celle-ci est activée, pour notifier dans le flux de news du portailles élèves des groupes concernés par la publication.
 
-![images/publication-quiz.jpg](./images/publication-quiz.jpg)
+![images/publication-quiz.png](./images/publication-quiz.png)
 
 #### Partage de quiz
 L'action de partager un quiz, le rend visible des autres profs quelque soit leur établissement de rattachement (tous les profs de l'ent qui ont accès au module de quizs).
