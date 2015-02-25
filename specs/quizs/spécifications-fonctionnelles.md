@@ -30,27 +30,27 @@ Le quiz se déroule question après question, une par page, la validation du for
 
 Le premier écran récapitule le paramétrage du quiz pour préciser à l'élève dans quelles conditions il va travailler.
 
-![images/014-reponse-quizs-lancement_1024.png](./images/014-reponse-quizs-lancement_1024.png)
+![images/014-reponse-quizs-lancement.png](./images/014-reponse-quizs-lancement.png)
 
 #### Rendu des QCM
 
-![images/015-reponse-quiz-qcm_1024.png](./images/015-reponse-quiz-qcm_1024.png)
+![images/015-reponse-quiz-qcm.png](./images/015-reponse-quiz-qcm.png)
 
 #### Rendu des associations
 
-![images/016-reponse-quiz-association_1024.png](./images/016-reponse-quiz-association_1024.png)
+![images/016-reponse-quiz-association.png](./images/016-reponse-quiz-association.png)
 
 Tous les fichiers multimédia sont affichés en fenêtre modale.
 
-![images/017-reponse-quiz-vu-media_1024.png](./images/017-reponse-quiz-vu-media_1024.png)
+![images/017-reponse-quiz-vu-media.png](./images/017-reponse-quiz-vu-media.png)
 
-![images/018-reponse-quiz-association2_1024.png](./images/018-reponse-quiz-association2_1024.png)
+![images/018-reponse-quiz-association2.png](./images/018-reponse-quiz-association2.png)
 
 #### Rendu des textes à trous
 
 La liste des propositions de réponse (les trous) est triées dans l'ordre alphabétique.
 
-![images/019-reponse-quiz-txt-trous_1024.png](./images/019-reponse-quiz-txt-trous_1024.png)
+![images/019-reponse-quiz-txt-trous.png](./images/019-reponse-quiz-txt-trous.png)
 
 ### Gestion des sessions
 Une session représente le fait qu'un utilisateur est en train d'exécuter le quiz. Elle démarre au lancement du quiz et se termine lorsque l'utilisateur le quitte, qu'il soit arrivé à la fin ou pas.
@@ -75,7 +75,7 @@ La liste affiche les attributs suivants :
 - lien vers le détail de ses réponses (sur la ligne complète )
 - lien vers un traitement de suppression de la session (non affiché sur le mockup mais nécessaire, sur la droite )
 
-![images/23-suivi-resultats-eleves_1024.png](./images/23-suivi-resultats-eleves_1024.png)
+![images/23-suivi-resultats-eleves.png](./images/23-suivi-resultats-eleves.png)
 
 Un filtre permet de réduire la liste des données affichées selon les critères suivants :
  - Derniers résultats (les + récents)
@@ -118,15 +118,15 @@ Les écrans de corrections sont bien évidemment en lecture seule.
 
 #### Correction QCM
 
-![images/020-correction-qcm_1024.png](./images/020-correction-qcm_1024.png)
+![images/020-correction-qcm.png](./images/020-correction-qcm.png)
 
 #### Correction textes à trous
 
-![images/022-correction-txt-trous_1024.png](./images/022-correction-txt-trous_1024.png)
+![images/022-correction-txt-trous.png](./images/022-correction-txt-trous.png)
 
 #### Correction Associations.
 
-![images/021-correction-association_1024.png](./images/021-correction-association_1024.png)
+![images/021-correction-association.png](./images/021-correction-association.png)
 
 
 ### Point d'entrée Profs / PEN
@@ -188,8 +188,8 @@ C'est une question à choix multiples ou choix unique. Le rendu est le même pou
 Le fomrulaire de création est donc identique.
 Par défaut, 8 propositions sont disponibles d'emblée à la saisie. Seuls les champs non vides sont enregistrés.
 
-![images/004-ajouter-qcm_1024.png](./images/004-ajouter-qcm_1024.png)
-![images/005-ajouter-qcm2_1024.png](./images/005-ajouter-qcm2_1024.png)
+![images/004-ajouter-qcm.png](./images/004-ajouter-qcm.png)
+![images/005-ajouter-qcm2.png](./images/005-ajouter-qcm2.png)
 
 
 ##### Les appariements ou associations
@@ -199,17 +199,17 @@ A l'instar du QCM, l'interface de création propose 8 emplacements pour chaque g
 La création d'une association se déroule en deux temps.  On ajoute d'abord les propositions dans les deux groupes (gauche et droite).
 Il n'est pas obligatoire d'avoir le même nombre de propositions dans les 2 groupes, et seuls les champs renseignés sont enregistrés.
 
-![images/007-ajouter-association2_1024.png](./images/007-ajouter-association2_1024.png)
+![images/007-ajouter-association2.png](./images/007-ajouter-association2.png)
 
 Dans un second temps, second écran, on réalise les leins entres propositions de gauche et propositions de droite.
 
-![images/008-ajouter-association3_1024.png](./images/008-ajouter-association3_1024.png)
+![images/008-ajouter-association3.png](./images/008-ajouter-association3.png)
 
 ##### Les textes à trous
 Ce sont des textes dans lequels certains mots doivent être complétés par l'élèves. Ces mots sont fournis par une liste fermée pouvant comporter des leurres, c'est-à-dire des réponses fausses.
 La liste fermée représente sous forme d'une selectbox constituée de la liste dédoublonnée de tous les mots manquants du textes à laquelle s'ajoute la liste des leurres. Cette liste est ensuite triée par ordre alphabétique.
 
-![images/011-ajouter-texte-trous2_1024.png](./images/011-ajouter-texte-trous2_1024.png)
+![images/011-ajouter-texte-trous2.png](./images/011-ajouter-texte-trous2.png)
 
 #### Publication d'un quiz / notification des élèves
 L'action de publier un quiz représente la mise à disposition de cet exercice pour un groupe d'élèves (classes ou regroupements).
