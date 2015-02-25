@@ -229,14 +229,7 @@ Cette action effectue une dupplication complèete en base de données du quiz ch
 
 ### Point d'entrée Elèves/parents
 Le point d'entrée des élèves présente les quizs qu'ils ont à faire par ordre du plus urgent (date de fin de publication la plus proche).
-
-```
-Il pourrait être intéressant que les élèves puissent eux-aussi fabriquer des quiz et les proposer à leur classe ou leurs groupes.
-A voir.
-
-Ajouter un mockup de ce point d'entrée.
-
-```
+Sur la partie droite de l'écran, il voit la liste de sessions déjà effectuées.
 
 
 ## Cadre technique
