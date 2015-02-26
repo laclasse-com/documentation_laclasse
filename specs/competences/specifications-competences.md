@@ -31,5 +31,15 @@ Dans cette partie, il est demandé
 - de se mettre en relation avec les responsables de SACoche afin qu'ils releasent la configuration sso LaclasseV3 de façon officielle dans leur application.
 
 ## Provisionning de données
+Lorsque SACoche est choisi par un établissement, il apparaît sur son portail, et se provisionne automatiquement des données issues de l'annuaire :
+- création de l'établissement
+- création des regroupements classes et groupes
+- création des comptes des personnels de l'éducation nationale
+- création des élèves
+- mise à niveau des profils administrateurs de Laclasse pour qu'ils soient administrateurs de SACoche
+- rapatriemement de données variées
+
+un premier mapping entre les besoins en données de SACoche et les API de l'annuaire V3 est disponible à l'adresse suivante : https://docs.google.com/spreadsheets/d/1fY47KVVEGQHvx-qCrVT4mWpBJEPAPSW1s1-B8Slo9m8/edit#gid=0
+
 
 ## Intégration dans le portail
