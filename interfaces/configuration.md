@@ -1,4 +1,6 @@
-# Idée
+# Gestion de configuration laclasse
+
+## Idée
 
 L'idée est de mettre la configuration en base (REDIS ou Database) en mode clé -> valeur.
  - common.ma.mes.clé.
@@ -15,24 +17,22 @@ son APP_ID laclasse et donc, que le module de configuration puisse aller
 chercher les bonnes clefs en combinant :
 
 - APP_ID
-- CONF_BACKEND (e.g. "redis://redis.laclasse.lan:6379",
-  "etcd://some.server", "mysql://user:pass@mysql.laclasse.lan",
-"yaml:///path/to/file", ...)
+- CONF_BACKEND (e.g. "redis://redis.laclasse.lan:6379", "etcd://some.server", "mysql://user:pass@mysql.laclasse.lan", "yaml:///path/to/file", ...)
 - RACK_ENV (production, devel, ...)
 - DOMAIN (e.g. laclasse.com)
-- 
-laclasse-commong pourrait alors chercher des clefs en combinant :
 
-ENV['DOMAIN'].split('.').reverse.join('.') + ENV['RACK_ENV'] + ENV['APP_ID']
+laclasse-common pourrait alors chercher des clefs en combinant :
+
+    ENV['DOMAIN'].split('.').reverse.join('.') + ENV['RACK_ENV'] + ENV['APP_ID']
 
 On pourrait donc aller chercher n'importe quelle clef de conf
 facilement.
 
-# Intérêt
+## Intérêt
 
-L'intérêt d'un tel système est multiple.
+L'intérêt d'un tel système est multiple :
 
-## Indépendant du CM
+### Indépendant du CM
 
 À l'usage, on s'est rendus compte que c'était assez peu fiable de
 déployer les confs (templates rendus par Ansible) depuis notre CM
@@ -41,22 +41,20 @@ développement (nouvelles clefs de conf) et delui du CM, dans la mesure
 ou les devs n'ont actuellement pas accès à l'inventaire du CM.
 
 Les déploiements pètent donc régulièrement, en tous cas, presqu'à chaque
-fois qu'une modif de conf est faite (multiplier par x2 quand on a pas
+fois qu'une modif de conf est faite (x2 quand on a pas
 encore reporté le fix de la dev vers la prod).
 
 Avec un tel système, les développeurs seront plus indépendants pour les
 déploiements.
 
-## Abstraction de l'implémentation de la gestion de la configuration
-applicative
+### Abstraction de l'implémentation de la gestion de la configuration applicative
 
 En fournissant une API pour accéder à sa propre conf, on s'abstrait de
 l'implémentation de la gestion de cette conf.
 On peut très bien implémenter des backends différents si nécessaire,
 pour lire la conf depuis un fichier YAML, Json ou depuis Redis, etcd,
-...
 
-## Reconfiguration au runtime
+### Reconfiguration au runtime
 
 En interrogeant systématiquement l'API de configuration (i.e. en évitant
 de stocker une valeur de configuration dans une variable ou une
@@ -66,7 +64,7 @@ performances des stores k/v, l'impact en termes de performance serait
 minime.
 On peut aussi imaginer un cache (court) de ces valeurs.
 
-## Configuration depuis les applications
+### Configuration depuis les applications
 
 Certaines applis, lorsqu'elle démarrent, pourraient aussi fournir des
 éléments de configuration aux autres applications. L'annuaire est un
@@ -75,7 +73,7 @@ Cela implique d'anticiper dans le code des applications, et d'assurer un
 fonctionnement même si ces données ne sont pas présentes (en présentant,
 à minima, un message indiquant le problème).
 
-# Interface
+## Interface
 
 Un singleton semble être le pattern idéal pour implementer cet accès aux
 confs.
