@@ -1,0 +1,38 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="759" measuredH="467" mockupW="241" mockupH="310">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TextInput" x="521" y="374" w="238" h="-1" measuredW="79" measuredH="26" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TextArea" x="518" y="177" w="241" h="159" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tapez%20ici%20votre%20texte%20en%20mettant%20les%20mots%2C%20solutions%20des%20trous%2C%20entre%20des%20caract%E8res%20*.%0A%20%0AChaque%20mot%20%22solution%22%20n%27apara%EEtra%20qu%27une%20seule%20fois%20dans%20la%20liste%20des%20possibilit%E9s%2C%20m%EAme%20s%27il%20est%20utilis%E9%20plusieurs%20fois%20dans%20votre%20texte.</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TextInput" x="521" y="406" w="238" h="-1" measuredW="79" measuredH="26" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="521" y="351" w="238" h="-1" measuredW="115" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Ajouter%20des%20leurres</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::PointyButton" x="529" y="440" w="-1" h="-1" measuredW="216" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <color>13421772</color>
+        <direction>center</direction>
+        <newLayout>true</newLayout>
+        <text>Ajouter%20un%20leurre%20suppl%E9mentaire</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="519" y="157" w="238" h="-1" measuredW="34" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Texte</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

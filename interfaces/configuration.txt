@@ -1,0 +1,18 @@
+L'idée est de mettre la configuration en base (REDIS ou Database) en mode clé -> valeur.
+ - common.ma.mes.clé.
+ - appli.ma.clé
+
+Chaque appli accedrait à la configuration par le biais d'une API de laclasse-common.
+ - loadConfiguration([prefixes]) => ex loadConfiguration(['common','admin']) ? 
+          Pourrait être automatisé sur le nom de l'appli est fournit pour toutes les applis...
+ - getValue(clé) return value String
+ - getIntValue, getLongValue 
+ - getJsonValue
+ 
+La mise à jour des clés et valeur se ferait uniquement au deploy afin de garantir la fiabilité des déploiements: 
+ - L'idée est d'avoir un repo sur gitlab (privée) qui permet au dev de spécifier par plateforme
+      les clés et valeurs correspondantes. Pas la peine de faire un fichier par appli. 
+      Ce qui compte c'est la plateforme. Genre la branche develop => plateform dev. Master => prod
+      Et une branche par appli pour les changements non déployé en prod. A merger avec la MEP.
+ - Le mécanisme de deploiement ferait un delete des valeurs précedentes
+      et injecterais les valeurs définit dans le repo pour l'environnement donnée. 
