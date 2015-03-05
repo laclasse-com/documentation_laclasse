@@ -10,23 +10,47 @@ Il serait alors possible de démarrer une apllication avec une
 configuration minimale (e.g. juste l'adresse du serveur de confs REDIS,
 ou autre), et de se configurer à partir de cette source.
 
-Chaque appli accedrait à la configuration par le biais d'une API de laclasse-common.
+Chaque appli accederait à la configuration par le biais d'une API de laclasse-common.
 
-On peut imaginer que, dans la conf minimal d'une appli, elle connaisse
+On peut imaginer que, dans la conf minimale d'une appli, elle connaisse
 son APP_ID laclasse et donc, que le module de configuration puisse aller
 chercher les bonnes clefs en combinant :
 
 - APP_ID
 - CONF_BACKEND (e.g. "redis://redis.laclasse.lan:6379", "etcd://some.server", "mysql://user:pass@mysql.laclasse.lan", "yaml:///path/to/file", ...)
 - RACK_ENV (production, devel, ...)
-- DOMAIN (e.g. laclasse.com)
+- DOMAIN (e.g. www.laclasse.com)
 
-laclasse-common pourrait alors chercher des clefs en combinant :
+laclasse-common pourrait alors chercher des clefs en combinant (exemple
+REDIS):
 
-    ENV['DOMAIN'].split('.').reverse.join('.') + ENV['RACK_ENV'] + ENV['APP_ID']
+    ENV['DOMAIN'].split('.').reverse.push(ENV['RACK_ENV'],ENV['APP_ID'],'some_key').join(':')
+    => com:laclasse:www:development:annuaire:some_key
 
 On pourrait donc aller chercher n'importe quelle clef de conf
 facilement.
+
+Il y a cependant quelques autres paramètres qu'il est difficile de
+n'obtenir qu'au runtime, et qui sont nécessaire dans d'autres phases de
+la mise en route:
+
+- déploiement
+  - utilisateur de déploiement: nécessaire pour installer l'appli au bon
+    endroit
+  - pid dir: répertoire dans lequel le pid file va être enregistré
+  - parent log dir: répertoire parent dans lequel un sous-répertoire
+    contenant l'application va être créé
+- bootstrapi web
+  - port d'écoute de l'application: nécessaire afin que le serveur web
+  démarre
+  - environnement: production, development, test
+- bootstrap applicatif
+  - host/port/credentials pour la/les bases de données
+
+Le dernier point (bootstrap applicatif) peut être pris en charge par le
+système de configuration de laclasse-common si celui ci est intégré
+suffisamment tôt (require 'laclasse-common' avant d'initialiser sequel
+par exemple).
 
 ## Intérêt
 
@@ -62,7 +86,9 @@ globale), on peut très bien imaginer reconfigurer les applications au
 runtime, sans avoir à redémarrer les instances. Compte tenu des
 performances des stores k/v, l'impact en termes de performance serait
 minime.
-On peut aussi imaginer un cache (court) de ces valeurs.
+On peut aussi imaginer un cache de ces valeurs, qui pourrait
+périodiquement vérifier le SHA1 de la configuration actuellement
+déployée.
 
 ### Configuration depuis les applications
 
