@@ -1,8 +1,13 @@
-# Spécifications fonctionnelles de l'import CSV des élèves dans l'annuaire ENT.
+# Spécifications fonctionnelles de l'import CSV des élèves et des profs dans l'annuaire ENT.
 
 ## objectif et contours fonctionnels
+L'objectif est de développer une interface permettant le chagement et le traitement de fichiers CSV pour la création de comptes d'élèves et de profs dans les écoles primaires.
+Cette interface est branchée au plus haut niveau de gestion des comptes, l'annuaire ENT, qui ensuite dispatche les comptes dans les 2 versions de l'ENT V2 et V3.
 
 ## Structure du fichier issu de BASE_ELEVES
+### Le fichier ELEVES
+
+### Le fichiers PROFS
 
 ## Structure de l'annuaire ENT
 
