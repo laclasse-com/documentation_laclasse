@@ -23,7 +23,14 @@ L'enchaînement des écrans est aussi déjà intégré, mais nécessitera d'êtr
 ## Règles de gestion
 
 ## écrans d'import
+Les paramètres requis pour accéder à l'écran d'import sont : 
+- action=csv
+- rne=[un code uai de collège]
+Le breadcrumb est renseigné automatiquement pour cette action.
+
 ### Zonning global
+Ce zonneing global est déjà existant. Il est simple : une zone de travail (le déroulement des étapes) et une zone d'aide contextuelle.
+![images/zonning.png](./images/zonning.png)
 
 ### Etape 1 : Choix du profil d'utilisateurs à importer
 ### Etape 2 : upload du fichier
