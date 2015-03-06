@@ -97,6 +97,7 @@ Il n'y a donc pas à modifier le référentiel, concernant l'établissement.
 
 ### Les élèves
 
+#### Table *eleve*
 Le problème majeur est que l'extraction CSV ne comporte aucun identifiant unique de la personne. Ce qui veut dire que l'on est obligé de générer cet identifiant unique sur la base des données fournies les plus pérennes.
 
 Pour l'élève, il s'agit de son *nom*, son *prénom* et sa *date de naissance*. 
@@ -142,6 +143,21 @@ echo get64BitHash("PIERRE-GILLESLEVALLOIS03/07/1970690078K");
 | etat_previsu            | -                       | verifier_eleve()               |                      | Ce champs est renseigné automatiquement lors de l'insertion |
 | date_last_maj           | -                       |                                |                      | Ce champs est renseigné automatiquement lors de l'insertion |
 | uid                     | -                       | fonction get_uid(ENTPersonJointure)             |                      | ENTPersonJointure est l'dentifiant généré avec la fonction get64BitHash                                         |
+
+#### Table des *classe*
+Dans cette table, chaque classe n'est insérée qu'une seule fois.
+
+| Table aaf.classe     | Données du fichiers CSV | Génération                     | Transformation          | Commentaire            |
+|---------------------|-------------------------|--------------------------------|-------------------------|------------------------|
+| ClasseStructRattach | -                       | identifiant de l'établissement |                         |                        |
+| ClasseNom           | Niveau                  |                                |                         |                        |
+| ClasseLibelleMEF    | Classe                  |                                |                         |                        |
+| ClasseCodeMEF       | Classe                  |                                | Première partie du code | ????                   |
+| ClasseMEFRattach    | -                       |                                |                         | id de la table MEF ??? |
+| date_last_maj       | -                       |                                |                         |                        |
+
+#### Table des *eleve_classe*
+C'est la table de relation entre les élèves et les classes, il faut donc y ajouter les identifiants respectifs de ces deux tables.
 
 ### Les parents
 
