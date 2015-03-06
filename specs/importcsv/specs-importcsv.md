@@ -36,16 +36,41 @@ L'extraction CSV de BASE_ELEVES contient les champs suivants :
 - Autorisations photos        (Oui/Non)
 - Décision de passage         (Oui/Non)
 
-Les quatres derniers champs fournis ne sont pas utilisé par le processus d'alimention à mettre en place.
+Les quatres derniers champs fournis ne sont pas utilisés par le processus d'alimention à mettre en place.
 
 ### Le fichiers des parents
+La structure du fichiers des arents est plus complexe puisque la relation 1-n parents <-> enfants est mise à plat dans le fichier.
+Cela signifie que la séquences des derniers champs peut se répéter autant de fois sur la même ligne qu'il y a d'enfants. Ce fichier a donc une structure variable.
+
+- Civilité Responsable    (3 valeurs possibles : M., MME, MLLE)
+- Nom usage responsable
+- Nom responsable
+- Prénom responsable
+- Adresse responsable
+- CP responsable
+- Commune responsable
+- Pays
+- Courriel
+- Téléphone domicile
+- Téléphone travail
+- Numéro de poste
+- Téléphone portable
+Puis les 4 champs répétés autant de fois que d'enfants dans l'école.
+- Nom d'usage enfant
+- Nom de famille enfant
+- Prénom enfant
+- Classes enfants
 
 ### Le fichiers PROFS
 
 ## Structure de l'annuaire ENT
 ### l'UID unique
+### Règles de validation des données
 
 ## Correspondances des données
+### Les élèves
+### Les parents
+### Les profs
 
 ## Règles de gestion
 
