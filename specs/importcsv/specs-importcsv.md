@@ -2,6 +2,12 @@
 # Intégration de l'import CSV des élèves et des profs dans l'annuaire ENT.
 
 ## objectif et contours fonctionnels
+L'annuaire ENT est le service qui réaliser l'analyse et l'importation des comptes fournis par le système d'informations de l'académie de LYON. Elle réceptione les donnéess poussées par l'académie tout les jours, parse le XML et consolide une base tampon de comptes d'élèves, de parents et de personnels de l'éducation nationale. Cette base alimente ensuite à la demande (manuellement ou automatiquement les ENT v2 et V3, selon le choix de chaque établissement).
+
+### Schéma général de fonctionement
+
+![../../interfaces/alimentation-academique.png](../../interfaces/alimentation-academique.png)
+
 L'objectif est de développer une interface permettant le chagement et le traitement de fichiers CSV pour la création de comptes d'élèves et de profs dans les écoles primaires.
 Le fichiers demandé aux administrateurs et  à destination de l'annuaire ENT est issu du système d'informations académique via une extraction au format CSV de l'application BASE_ELEVES.
 Cette interface est branchée au plus haut niveau de gestion des comptes, l'annuaire ENT, qui ensuite dispatche les comptes dans les 2 versions de l'ENT V2 et V3.
