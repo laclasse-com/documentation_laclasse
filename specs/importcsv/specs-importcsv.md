@@ -49,7 +49,7 @@ L'extraction CSV de BASE_ELEVES contient les champs suivants :
 Les quatres derniers champs fournis ne sont pas utilisés par le processus d'alimention à mettre en place.
 
 ### Le fichiers des parents
-La structure du fichiers des arents est plus complexe puisque la relation 1-n parents <-> enfants est mise à plat dans le fichier.
+La structure du fichiers des parents est plus complexe puisque la relation 1-n parents <-> enfants est mise à plat dans le fichier.
 Cela signifie que la séquences des derniers champs peut se répéter autant de fois sur la même ligne qu'il y a d'enfants. Ce fichier a donc une structure variable.
 
 - Civilité Responsable    (3 valeurs possibles : M., MME, MLLE)
@@ -96,9 +96,32 @@ Par conséquent, l'établissement existe déjà dans le référentiel de l'annua
 Il n'y a donc pas à modifier le référentiel, concernant l'établissement.
 
 ### Les élèves
+
+Le problème majeur est que l'extraction CSV ne comporte aucun identifiant unique de la personne. Ce qui veut dire que l'on est obligé de générer cet identifiant unique sur la base des données fournies les plus pérennes.
+
+Pour l'élève, il s'agit de son *nom*, son *prénom* et sa *date de naissance*. 
+En ffet, au sein d'une même académie, il est rare, voir quasiment impossible de tomber sur des doublons en associant ces 3 données.
+
+La contrainte supplémentaire consiste à générer un identifiant de type `entier` car ceux envoyés par l'académie pour les comptes de collèges sont de ce type, mais dans des plages relativement basse (largement inférieurs à 10 000 000).
+Enfin la dernière contrainte est bien évidemment d'éviter les collisions entre les identifiants issus de l'académie et ceux générés en interne dans l'annuaire ENT pour les comptes issus des fichiers CSV.
+
+Une fonction php permet de générer un entier sur la base d'une chaîne de caractères. Elle sera utilisée pour la génération de cet identifiant unique.
+```php
+function get64BitHash($str)
+{
+  return gmp_strval(gmp_init(substr(md5($str), 0, 16), 16), 10);
+}
+```
+exemple d'usage : 
+```php
+echo get64BitHash("PIERRE-GILLESLEVALLOIS03/07/1970690078K");
+// Affiche 2721088881606737241
+```
+
+
 | Table aaf.eleve         | Données du fichiers CSV | Génération                     | Transformation       | Commentaire                                                 |
 |-------------------------|-------------------------|--------------------------------|----------------------|-------------------------------------------------------------|
-| ENTPersonJointure       | -                       | ?????                          |                      |                                                             |
+| ENTPersonJointure       | -                       | génération en interne sur la base de la fonction get64BitHash()                          |                      |                                                             |
 | categoriePersonne       | -                       | null                           |                      |                                                             |
 | ENTPersonDateNaissance  | Date naissance          |                                |                      |                                                             |
 | ENTPersonNomPatro       | Nom Elève               |                                |                      |                                                             |
@@ -118,7 +141,8 @@ Il n'y a donc pas à modifier le référentiel, concernant l'établissement.
 | ENTEleveStructRattachId | -                       |                                |                      |                                                             |
 | etat_previsu            | -                       | verifier_eleve()               |                      | Ce champs est renseigné automatiquement lors de l'insertion |
 | date_last_maj           | -                       |                                |                      | Ce champs est renseigné automatiquement lors de l'insertion |
-| uid                     | -                       | fonction get_uid()             |                      |                                                             |
+| uid                     | -                       | fonction get_uid(ENTPersonJointure)             |                      | ENTPersonJointure est l'dentifiant généré avec la fonction get64BitHash                                         |
+
 ### Les parents
 
 ### Les profs
