@@ -65,11 +65,31 @@ Puis les 4 champs répétés autant de fois que d'enfants dans l'école.
 
 ## Structure de l'annuaire ENT
 ### l'UID unique
+A chaque utilisateur est affecté un uid unique normé par l'annexe du SDET concernant l'annuaire ENT. Une fonction php permet de récupérer un UIDen fonction de certains paramètres.
+
 ### Règles de validation des données
+Une classe PHP permet de créer des règles de validation des données et ainsi de pouvoir afficher en face de chaque compte l'état des données. Ces états sont au nombre de 3 : 
+- OK : le compte peut être créé , les données reçues sont valides
+- WARN : certaines données sont invalides, mais cela n'emêche pas la création du compte
+- ERROR : certaines données sont invalides et c'est bloquant pour la création du compte.
+
+#### Validation des données élèves.
+
+#### Validation des données Parents
+
+#### Validation des données Profs
 
 ## Correspondances des données
+
+### L'établissement
+Lorsqu'on arrive sur l'interface d'alimentation par CSV, l'établissement est déjà choisi (son code UAI est un paramètre requis pour afficher cet écran).
+Par conséquent, l'établissement existe déjà dans le référentiel de l'annuaire ENT (Si ce n'est pas le cas, charge aux administrateur de l'ENT de l'y ajouter).
+Il n'y a donc pas à modifier le référentiel, concernant l'établissement.
+
 ### Les élèves
+
 ### Les parents
+
 ### Les profs
 
 ## Règles de gestion
