@@ -65,19 +65,16 @@ Puis les 4 champs répétés autant de fois que d'enfants dans l'école.
 
 ## Structure de l'annuaire ENT
 ### l'UID unique
-A chaque utilisateur est affecté un uid unique normé par l'annexe du SDET concernant l'annuaire ENT. Une fonction php permet de récupérer un UIDen fonction de certains paramètres.
+A chaque utilisateur est affecté un uid unique normé par l'annexe du SDET concernant l'annuaire ENT. Une fonction php permet de récupérer un UID en fonction de certains paramètres.
 
 ### Règles de validation des données
 Une classe PHP permet de créer des règles de validation des données et ainsi de pouvoir afficher en face de chaque compte l'état des données. Ces états sont au nombre de 3 : 
-- OK : le compte peut être créé , les données reçues sont valides
+- OK : le compte peut être créé, les données reçues sont valides.
 - WARN : certaines données sont invalides, mais cela n'emêche pas la création du compte
 - ERROR : certaines données sont invalides et c'est bloquant pour la création du compte.
 
-#### Validation des données élèves.
-
-#### Validation des données Parents
-
-#### Validation des données Profs
+Ces règles sont exécutées à l'insertion dans la base de données, et leur résultat est stocké dans un attribut de la table concernée.
+Par exemple, pour les élèves, le traitement d'insertion est `insert_eleves([])` Ce traitement insert toutes les lignes d'élèves du tableau passé en paramètre dans la table `eleves`, et à chaque insertion, les règles d'analyse sont exécutées et leur résutat stocké dans l'attribut `etat_previsu` de la table `eleves`
 
 ## Correspondances des données
 
