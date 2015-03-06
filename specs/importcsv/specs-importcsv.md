@@ -3,6 +3,7 @@
 
 ## objectif et contours fonctionnels
 L'objectif est de développer une interface permettant le chagement et le traitement de fichiers CSV pour la création de comptes d'élèves et de profs dans les écoles primaires.
+Le fichiers demandé aux administrateurs et  à destination de l'annuaire ENT est issu du système d'informations académique via une extraction au format CSV de l'application BASE_ELEVES.
 Cette interface est branchée au plus haut niveau de gestion des comptes, l'annuaire ENT, qui ensuite dispatche les comptes dans les 2 versions de l'ENT V2 et V3.
 Les développements devront s'intégrer dans l'existant, en utilisant au maximum les fonctions, commandes et classes existantes. Il n'est pas demandé dans ce travail de refactorer l'ensemble de l'application, néanmoins des propositions de refactoring pourront être faites en fin de projet.
 
@@ -12,6 +13,32 @@ L'enchaînement des écrans est aussi déjà intégré, mais nécessitera d'êtr
 
 ## Structure du fichier issu de BASE_ELEVES
 ### Le fichier ELEVES
+L'extraction CSV de BASE_ELEVES contient les champs suivants :
+
+- Nom Elève
+- Nom d'usage Elève
+- Prénom Elève
+- Date naissance
+- Sexe
+- Adresse1
+- Cp1
+- Commune1
+- Pays1
+- Adresse2
+- Cp2
+- Commune2
+- Pays2
+- Cycle         (Il s'agit du cycle d'apprentissage : cycle II, ou III)
+- Niveau        (On trouve dans ce champs le niveau de la classe CP, CE1 , CE2, CM1 , CM2)
+- Classe        (On trouve ici la typologie de classe : "01 COURS PREPARATOIRE-COURS ELEMENTAIRE 1", "02 COURS ELEMENTAIRE 1 ET 2", "03 COURS ELEMENTAIRE 2 COURS MOYEN 1", "04 COURS MOYEN 1 ET 2")
+- Attestation fournie         (Oui/Non)
+- Autorisations associations  (Oui/Non)
+- Autorisations photos        (Oui/Non)
+- Décision de passage         (Oui/Non)
+
+Les quatres derniers champs fournis ne sont pas utilisé par le processus d'alimention à mettre en place.
+
+### Le fichiers des parents
 
 ### Le fichiers PROFS
 
