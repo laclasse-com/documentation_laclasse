@@ -10,7 +10,11 @@ L'annuaire ENT est le service qui réaliser l'analyse et l'importation des compt
 
 L'objectif est de développer une interface permettant le chagement et le traitement de fichiers CSV pour la création de comptes d'élèves et de profs dans les écoles primaires.
 Le fichiers demandé aux administrateurs et  à destination de l'annuaire ENT est issu du système d'informations académique via une extraction au format CSV de l'application BASE_ELEVES.
+
 Cette interface est branchée au plus haut niveau de gestion des comptes, l'annuaire ENT, qui ensuite dispatche les comptes dans les 2 versions de l'ENT V2 et V3.
+
+*Le traitement prendra en entrée les données des fichiers CSV et les transformera dans les formats utilisées par les api d'insertion/modification de base de données.* Cette partie est spécifiée plus bas dans ce document.
+
 Les développements devront s'intégrer dans l'existant, en utilisant au maximum les fonctions, commandes et classes existantes. Il n'est pas demandé dans ce travail de refactorer l'ensemble de l'application, néanmoins des propositions de refactoring pourront être faites en fin de projet.
 
 ## L'existant
@@ -80,7 +84,9 @@ Une classe PHP permet de créer des règles de validation des données et ainsi 
 - ERROR : certaines données sont invalides et c'est bloquant pour la création du compte.
 
 Ces règles sont exécutées à l'insertion dans la base de données, et leur résultat est stocké dans un attribut de la table concernée.
-Par exemple, pour les élèves, le traitement d'insertion est `insert_eleves([])` Ce traitement insert toutes les lignes d'élèves du tableau passé en paramètre dans la table `eleves`, et à chaque insertion, les règles d'analyse sont exécutées et leur résutat stocké dans l'attribut `etat_previsu` de la table `eleves`
+Par exemple, pour les élèves, le traitement d'insertion est `insert_eleves([])` Ce traitement insert toutes les lignes d'élèves du tableau passé en paramètre dans la table `eleves`, et à chaque insertion, les règles d'analyse sont exécutées et leur résutat stocké dans l'attribut `etat_previsu` de la table `eleves`.
+Cela siginfie que les données, même si elle ne sont pas correctes, sont insérées dans la base tampon. Elles ne seront de toutes façon pas exportées vers les ENT si elle sont marquées 'ERROR'.
+Ce choix a été fait initialement, pour permettre aux administrateurs d'établissement de concerver un état consistant des erreurs à corriger, donné sur simple appel de la page de bilan.
 
 ## Correspondances des données
 
@@ -120,7 +126,8 @@ Ce zonneing global est déjà existant. Il est simple : une zone de travail (le 
 - JQuery
 
 ### Serveur
-- Php 5.3
+- Apache 2.0
+- Php 5.3.10
 
 ### Base de données
 - Mysql
