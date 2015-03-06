@@ -96,7 +96,29 @@ Par conséquent, l'établissement existe déjà dans le référentiel de l'annua
 Il n'y a donc pas à modifier le référentiel, concernant l'établissement.
 
 ### Les élèves
-
+| Table aaf.eleve         | Données du fichiers CSV | Génération                     | Transformation       | Commentaire                                                 |
+|-------------------------|-------------------------|--------------------------------|----------------------|-------------------------------------------------------------|
+| ENTPersonJointure       | -                       | ?????                          |                      |                                                             |
+| categoriePersonne       | -                       | null                           |                      |                                                             |
+| ENTPersonDateNaissance  | Date naissance          |                                |                      |                                                             |
+| ENTPersonNomPatro       | Nom Elève               |                                |                      |                                                             |
+| sn                      | Nom Elève               |                                |                      |                                                             |
+| givenName               | Prénom Elève            |                                |                      |                                                             |
+| ENTPersonAutresPrenoms  | Prénom Elève            |                                |                      |                                                             |
+| personalTitle           | Sexe                    |                                | Formatage M. ou Mlle |                                                             |
+| ENTEleveBoursier        | -                       |                                |                      |                                                             |
+| ENTEleveRegime          | -                       |                                |                      |                                                             |
+| ENTEleveTransport       | -                       |                                |                      |                                                             |
+| ENTEleveStatutEleve     | -                       |                                |                      |                                                             |
+| ENTEleveMEF             | Classe                  |                                | ????                 |                                                             |
+| ENTEleveLibelleMEF      | Classe                  |                                | ????                 |                                                             |
+| ENTEleveNivFormation    | Niveau                  |                                |                      |                                                             |
+| ENTEleveFiliere         | -                       |                                |                      |                                                             |
+| ENTPersonStructRattach  | -                       | Identifiant de l'établissement |                      |                                                             |
+| ENTEleveStructRattachId | -                       |                                |                      |                                                             |
+| etat_previsu            | -                       | verifier_eleve()               |                      | Ce champs est renseigné automatiquement lors de l'insertion |
+| date_last_maj           | -                       |                                |                      | Ce champs est renseigné automatiquement lors de l'insertion |
+| uid                     | -                       | fonction get_uid()             |                      |                                                             |
 ### Les parents
 
 ### Les profs
