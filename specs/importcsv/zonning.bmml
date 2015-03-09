@@ -1,0 +1,33 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1085" measuredH="571" mockupW="656" mockupH="405">
+  <controls>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Canvas" x="431" y="166" w="654" h="40" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Label" x="739" y="176" w="-1" h="-1" measuredW="44" measuredH="21" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Header</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="431" y="212" w="-1" h="-1" measuredW="334" measuredH="24" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Liste%20des%20%E9tablissements%2C%20Chargement%20de%20fichiers%20CSV</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Canvas" x="429" y="245" w="434" h="267" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Canvas" x="872" y="244" w="213" h="268" measuredW="100" measuredH="70" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Canvas" x="430" y="522" w="655" h="49" measuredW="100" measuredH="70" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="510" y="288" w="-1" h="-1" measuredW="272" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Zone%20de%20travail%20et%20de%20d%E9roulement%20des%20%E9tapes</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Paragraph" x="902" y="288" w="153" h="46" measuredW="275" measuredH="80" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Zone%20d%27aide%20contextuelle%20par%20rapport%20aux%20%E9tapes</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Label" x="739" y="536" w="-1" h="-1" measuredW="39" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Footer</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
