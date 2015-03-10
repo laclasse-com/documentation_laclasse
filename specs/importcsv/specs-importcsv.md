@@ -136,7 +136,7 @@ echo get64BitHash("PIERRE-GILLESLEVALLOIS03/07/1970690078K");
 | ENTEleveRegime          | -                       |                                |                      |                                                             |
 | ENTEleveTransport       | -                       |                                |                      |                                                             |
 | ENTEleveStatutEleve     | -                       |                                |                      |                                                             |
-| ENTEleveMEF             | Classe                  |                                | ????                 |                                                             |
+| ENTEleveMEF             | Classe                  |                                |                      |  Code MEF trouvé dans la table des MEF en fonction de la classe (CP,CE1, CE2, CM1, CM2)                                                      |
 | ENTEleveLibelleMEF      | Classe                  |                                | ????                 |                                                             |
 | ENTEleveNivFormation    | Niveau                  |                                |                      |                                                             |
 | ENTEleveFiliere         | -                       |                                |                      |                                                             |
@@ -145,6 +145,27 @@ echo get64BitHash("PIERRE-GILLESLEVALLOIS03/07/1970690078K");
 | etat_previsu            | -                       | verifier_eleve()               |                      | Ce champs est renseigné automatiquement lors de l'insertion |
 | date_last_maj           | -                       |                                |                      | Ce champs est renseigné automatiquement lors de l'insertion |
 | uid                     | -                       | fonction get_uid(ENTPersonJointure)             |                      | ENTPersonJointure est l'dentifiant généré avec la fonction get64BitHash                                         |
+
+Note sur les MEF : 
+Les code de Module Elémentaire de Formation au format "Education Nationale" sont les suivants : 
+- 00110002110 : CP
+- 00210002210 : CE1
+- 00210002220 : CE2
+- 00310002210 : CM1
+- 00310002220 : CM2
+
+Il faudra coder une fonction qui permet d'dentifier les MEF au format officiel (11 chiffres) avec les champs du fichier CSV  Cycle,	Niveau,	Classe, qui bien évidemment ne sont pas formatté de la même manière (ça aurait été trop facile).
+
+Voici un exemple de ce qu'on peut trouver dans le fichier csv :(
+
+| Cycle | Niveau | Classe | Code MEF à Associer |
+|-------|--------|--------|---------------------|
+| CYCLE II	 | CP	 | 01 COURS PREPARATOIRE-COURS ELEMENTAIRE 1 | 00110002110 |
+| CYCLE II	 | CE1 | 02 COURS ELEMENTAIRE 1 ET 2 | 00210002210 |
+| CYCLE II	 | CE1 | 01 COURS PREPARATOIRE-COURS ELEMENTAIRE 1 | 00210002220 |
+| CYCLE III | CE2 | 03 COURS ELEMENTAIRE 2 COURS MOYEN 1 | 00310002210 |
+| CYCLE III | CM2 | 04 COURS MOYEN 1 ET 2 | 00310002220 |
+
 
 #### Table des *classe*
 Dans cette table, chaque classe n'est insérée qu'une seule fois.
