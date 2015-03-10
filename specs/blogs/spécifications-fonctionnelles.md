@@ -9,19 +9,39 @@ Il sera ré-écrit à iso-fonctionnalité de la version existante.
 
 ## Description fonctionnelle
 
-3 types de blogs :
+La plateforme de blog se base sur WordPress qu'un plugin spécifique permet de piloté
+
+Il existe 3 types de blogs :
 * blog d'établissement
 * blog de regroupement (classe, groupe d'élève, groupe libre)
 * blog personnel
 
+Une fois connecté sur laclasse.com l'utilisateur peut (en fonction de son profil et de ses droits) :
+* consulter la liste des blogs auxquels il participe,
+* gérer sa participation à un blog,
+* créer un blog,
+* supprimer un blog existant.
+
 ### Liste des blogs de l'utilisateur
 (Où récupérer les blogs accessibles par un utilisateur ?)
+
+* un utilisateur SuperAdmin vois tous les blogs,
+* un utilisateur non Superadmin vois les blogs auxquels il participe.
 
 ### Création d'un blog
 Seuls les profils PROF, ADM_ETB, CPE, PRINCIPAL peuvent créer un blog.
 Pour créer un blog il faut définir :
-* son type,
-* son titre
+* son titre,
+* son type :
+  - CLS : Blogs de classes.
+  - ETB : BLogs d'établissement ( page d'établissement).
+  - GRP : Blogs de groupe d'élèves
+  - ENV : Blogs de groupes de travail.
+  - USR : Blogs personnels.
+
+
+### Désinscription d'un blog
+L'utilisateur peut se désinscrire d'un blog auquel il est inscrit.
 
 ### Suppression d'un blog
 Seul l'utilisateur Administrator du blog ou un utilisateur Super Admin peut supprimer un blog.
