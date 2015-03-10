@@ -147,14 +147,14 @@ echo get64BitHash("PIERRE-GILLESLEVALLOIS03/07/1970690078K");
 | uid                     | -                       | fonction get_uid(ENTPersonJointure)             |                      | ENTPersonJointure est l'dentifiant généré avec la fonction get64BitHash                                         |
 
 Note sur les MEF : 
-Les code de Module Elémentaire de Formation au format "Education Nationale" sont les suivants : 
+Les codes de Module Elémentaire de Formation au format "Education Nationale" font partie du référentiel de l'annuaire ENT. Pour l'école, ils sont les suivants : 
 - 00110002110 : CP
 - 00210002210 : CE1
 - 00210002220 : CE2
 - 00310002210 : CM1
 - 00310002220 : CM2
 
-Il faudra coder une fonction qui permet d'dentifier les MEF au format officiel (11 chiffres) avec les champs du fichier CSV  Cycle,	Niveau,	Classe, qui bien évidemment ne sont pas formatté de la même manière (ça aurait été trop facile).
+Il faudra coder une fonction qui permet d'dentifier les MEF au format officiel (11 chiffres) et de les associer avec les champs du fichier CSV  Cycle,	Niveau,	Classe, qui bien évidemment ne sont pas formattés de la même manière (ça aurait été trop facile).
 
 Voici un exemple de ce qu'on peut trouver dans le fichier csv :(
 
