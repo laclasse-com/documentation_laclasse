@@ -203,6 +203,7 @@ Url d'accès : *?action=csv&rne=[un code uai de collège]*
 Cette étape permet de choisir le type de fichier à importer (eleves, parents, ou profs).
 
 ### Etape 2 : upload du fichier
+Url d'accès : ?action=csv&rne=[un code uai de collège]&profil=[eleve, parent, prof]
 Cette étape fait l'upload du fichier, la vérification de sa structure et l'analyse de conformité par rapport aux données attendues.
 Si le fichier n'est pas conforme, un écran d'erreur est affiché, expliquant quelles sont les conditions qui ne sont pas remplies.
 En revanche si le fichier est conforme, le traitement de création des comptes est réalisé.
@@ -223,15 +224,15 @@ Une classe de log permet d'instrumentaliser simplement le traitement de créatio
 * Usage :
 */
 $monLog = new log("Interface CSV");
-$monLog.section("Création du compte...")
-$monLog.info("texte texte");
-$monLog.warn("texte texte");
+$monLog->section("Création du compte...")
+$monLog->info("texte texte");
+$monLog->warn("texte texte");
 ... 
-$monLog.error("texte texte");
+$monLog->error("texte texte");
 ...
-$monLog.panic("texte texte");
+$monLog->panic("texte texte");
 ...
-$monLog.end();
+$monLog->end();
 ...
 ```
 
