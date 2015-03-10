@@ -137,7 +137,7 @@ echo get64BitHash("PIERRE-GILLESLEVALLOIS03/07/1970690078K");
 | ENTEleveTransport       | -                       |                                |                      |                                                             |
 | ENTEleveStatutEleve     | -                       |                                |                      |                                                             |
 | ENTEleveMEF             | Classe                  |                                |                      |  Code MEF trouvé dans la table des MEF en fonction de la classe (CP,CE1, CE2, CM1, CM2)                                                      |
-| ENTEleveLibelleMEF      | Classe                  |                                | ????                 |                                                             |
+| ENTEleveLibelleMEF      | Classe                  |                                |                      | Libellé trouvé dans la table des MEF, en fonction du code   |
 | ENTEleveNivFormation    | Niveau                  |                                |                      |                                                             |
 | ENTEleveFiliere         | -                       |                                |                      |                                                             |
 | ENTPersonStructRattach  | -                       | Identifiant de l'établissement |                      |                                                             |
@@ -199,10 +199,41 @@ Ce zonning global est déjà existant. Il est simple : une zone de travail (le d
 ![images/zonning.png](./images/zonning.png)
 
 ### Etape 1 : Choix du profil d'utilisateurs à importer
+Url d'accès : *?action=csv&rne=[un code uai de collège]*
+Cette étape permet de choisir le type de fichier à importer (eleves, parents, ou profs).
+
 ### Etape 2 : upload du fichier
-### Etape 3 : prévisualisation des changements, application des règles de validation
-### Etape 4 : Application des changements
-### Etape 5 : Compte rendu d'activité
+Cette étape fait l'upload du fichier, la vérification de sa structure et l'analyse de conformité par rapport aux données attendues.
+Si le fichier n'est pas conforme, un écran d'erreur est affiché, expliquant quelles sont les conditions qui ne sont pas remplies.
+En revanche si le fichier est conforme, le traitement de création des comptes est réalisé.
+
+### Etape 3 : Compte rendu d'activité
+Ce compte rnedu d'activité est donné par l'url suivante : *?action=rapport&rne=[code UAI]&profil=eleve*
+Le travail côté serveur est donc de rediriger vers cette page qui afficher un état des comptes élèves.
+
+## Logging du traitement
+Une classe de log permet d'instrumentaliser simplement le traitement de création de comptes afin qu'il soit possible d'en relire le déroulement à postériori.
+
+```php
+/* 
+* Classe simple et efficace de gestion de log, création de fichier, écriture, formatage.
+* Les logs sont au format HTML par défaut, comme ça ils sont consultables depuis le web.
+* 14/06/2009 : PGL.
+*
+* Usage :
+*/
+$monLog = new log("Interface CSV");
+$monLog.section("Création du compte...")
+$monLog.info("texte texte");
+$monLog.warn("texte texte");
+... 
+$monLog.error("texte texte");
+...
+$monLog.panic("texte texte");
+...
+$monLog.end();
+...
+```
 
 ## Environnement technique 
 ### Client web
