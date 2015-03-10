@@ -2,14 +2,14 @@
 # Intégration de l'import CSV des élèves et des profs dans l'annuaire ENT.
 
 ## objectif et contours fonctionnels
-L'annuaire ENT est le service qui réaliser l'analyse et l'importation des comptes fournis par le système d'informations de l'académie de LYON. Elle réceptione les donnéess poussées par l'académie tout les jours, parse le XML et consolide une base tampon de comptes d'élèves, de parents et de personnels de l'éducation nationale. Cette base alimente ensuite à la demande (manuellement ou automatiquement les ENT v2 et V3, selon le choix de chaque établissement).
+L'annuaire ENT est le service qui réaliser l'analyse et l'importation des comptes fournis par le système d'informations de l'académie de LYON. Elle réceptionne les donnéess poussées par l'académie tout les jours, parse le XML et consolide une base tampon de comptes d'élèves, de parents et de personnels de l'éducation nationale. Cette base alimente ensuite à la demande (manuellement ou automatiquement les ENT v2 et V3, selon le choix de chaque établissement).
 
 ### Schéma général de fonctionement
 
 ![../../interfaces/alimentation-academique.png](../../interfaces/alimentation-academique.png)
 
 L'objectif est de développer une interface permettant le chagement et le traitement de fichiers CSV pour la création de comptes d'élèves et de profs dans les écoles primaires.
-Le fichiers demandé aux administrateurs et  à destination de l'annuaire ENT est issu du système d'informations académique via une extraction au format CSV de l'application BASE_ELEVES.
+Le fichiers demandé aux administrateurs et à destination de l'annuaire ENT est issu du système d'information académique via une extraction au format CSV de l'application BASE_ELEVES.
 
 Cette interface est branchée au plus haut niveau de gestion des comptes, l'annuaire ENT, qui ensuite dispatche les comptes dans les 2 versions de l'ENT V2 et V3.
 
@@ -21,7 +21,7 @@ Les développements devront s'intégrer dans l'existant, en utilisant au maximum
 
 ## L'existant
 L'interface web de l'annuaire ENT est existante. Il faut donc intégrer la fonctionnalité CSV dans l'existant.
-L'enchaînement des écrans est aussi déjà intégré, mais nécessitera d'être revue afin d'évoluer avec les developpements demandé. Aucun traitement n'a encore été ecrit, l'existant représente donc les mockups d'enchaînement des écrans.
+L'enchaînement des écrans est aussi déjà intégré, mais nécessitera d'être revue afin d'évoluer avec les developpements demandé. Aucun traitement n'a encore été ecrit, l'existant ne représente donc qu'une maquette d'enchaînement des écrans.
 
 ## Structure du fichier issu de BASE_ELEVES
 ### Le fichier ELEVES
