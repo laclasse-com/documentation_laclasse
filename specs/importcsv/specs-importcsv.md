@@ -126,7 +126,7 @@ echo get64BitHash("PIERRE-GILLESLEVALLOIS03/07/1970690078K");
 |-------------------------|-------------------------|--------------------------------|----------------------|-------------------------------------------------------------|
 | ENTPersonJointure       | -                       | génération en interne sur la base de la fonction get64BitHash()                          |                      |                                                             |
 | categoriePersonne       | -                       | null                           |                      |                                                             |
-| ENTPersonDateNaissance  | Date naissance          |                                |                      |                                                             |
+| ENTPersonDateNaissance  | Date naissance          |                                |                      | au format ISO 8601                                         |
 | ENTPersonNomPatro       | Nom Elève               |                                |                      |                                                             |
 | sn                      | Nom Elève               |                                |                      |                                                             |
 | givenName               | Prénom Elève            |                                |                      |                                                             |
