@@ -2,16 +2,16 @@
 # Intégration de l'import CSV des élèves et des profs dans l'annuaire ENT.
 
 ## objectif et contours fonctionnels
-L'annuaire ENT est le service qui réaliser l'analyse et l'importation des comptes fournis par le système d'informations de l'académie de LYON. Elle réceptionne les donnéess poussées par l'académie tout les jours, parse le XML et consolide une base tampon de comptes d'élèves, de parents et de personnels de l'éducation nationale. Cette base alimente ensuite à la demande (manuellement ou automatiquement les ENT v2 et V3, selon le choix de chaque établissement).
+L'annuaire ENT est le service qui réaliser l'analyse et l'importation des comptes fournis par le système d'information de l'académie de LYON. Elle réceptionne les données poussées par l'académie tout les jours, parse le XML et consolide une base tampon de comptes d'élèves, de parents et de personnels de l'éducation nationale. Cette base alimente ensuite à la demande (manuellement ou automatiquement les ENT v2 et V3, selon le choix de chaque établissement).
 
 ### Schéma général de fonctionement
 
 ![../../interfaces/alimentation-academique.png](../../interfaces/alimentation-academique.png)
 
-L'objectif est de développer une interface permettant le chagement et le traitement de fichiers CSV pour la création de comptes d'élèves et de profs dans les écoles primaires.
-Le fichiers demandé aux administrateurs et à destination de l'annuaire ENT est issu du système d'information académique via une extraction au format CSV de l'application BASE_ELEVES.
+L'objectif est de développer une interface permettant le chargement et le traitement de fichiers CSV pour la création de comptes d'élèves et de profs dans les écoles primaires.
+Le fichier demandé aux administrateurs et à destination de l'annuaire ENT est issu du système d'information académique via une extraction au format CSV de l'application BASE_ELEVES.
 
-Cette interface est branchée au plus haut niveau de gestion des comptes, l'annuaire ENT, qui ensuite dispatche les comptes dans les 2 versions de l'ENT V2 et V3.
+Cette interface est branchée au plus haut niveau de gestion des comptes, l'annuaire ENT, qui ensuite dispatche les comptes dans les 2 versions de l'ENT V2 et V3. L'alimentation CSV devient alors une source autoritaire au même titre que l'alimentation académique.
 
 *Le traitement prendra en entrée les données des fichiers CSV et les transformera dans les formats utilisées par les api d'insertion/modification de base de données qui sont déjà alimentée par l'analyse des fichiers XML.* Cette partie est spécifiée plus bas dans ce document.
 
@@ -54,33 +54,33 @@ Les quatres derniers champs fournis ne sont pas utilisés par le processus d'ali
 
 ## Structure de l'annuaire ENT
 ### l'UID unique
-A chaque utilisateur est affecté un uid unique normé par l'annexe du SDET concernant l'annuaire ENT. Une fonction php permet de récupérer un UID en fonction de certains paramètres.
+A chaque utilisateur est affecté un uid unique normé par l'annexe du SDET concernant l'annuaire ENT. Une fonction php permet de récupérer un UID en fonction de certains paramètres, notamment l'identifiant de jointure.
 
 ### Règles de validation des données
 Une classe PHP permet de créer des règles de validation des données et ainsi de pouvoir afficher en face de chaque compte l'état des données. Ces états sont au nombre de 3 : 
 - OK : le compte peut être créé, les données reçues sont valides.
-- WARN : certaines données sont invalides, mais cela n'emêche pas la création du compte
+- WARN : certaines données sont invalides, mais cela n'empêche pas la création du compte
 - ERROR : certaines données sont invalides et c'est bloquant pour la création du compte.
 
 Ces règles sont exécutées à l'insertion dans la base de données, et leur résultat est stocké dans un attribut de la table concernée.
-Par exemple, pour les élèves, le traitement d'insertion est `insert_eleves([])` Ce traitement insert toutes les lignes d'élèves du tableau passé en paramètre dans la table `eleves`, et à chaque insertion, les règles d'analyse sont exécutées et leur résutat stocké dans l'attribut `etat_previsu` de la table `eleves`.
-Cela siginfie que les données, même si elle ne sont pas correctes, sont insérées dans la base tampon. Elles ne seront de toutes façon pas exportées vers les ENT si elle sont marquées 'ERROR'.
-Ce choix a été fait initialement, pour permettre aux administrateurs d'établissement de concerver un état consistant des erreurs à corriger, donné sur simple appel de la page de bilan.
+Par exemple, pour les élèves, le traitement d'insertion est `insert_eleves([])` Ce traitement insert toutes les lignes d'élèves du tableau passé en paramètre dans la table `eleve`, et à chaque insertion, les règles d'analyse sont exécutées et leur résutat stocké dans l'attribut `etat_previsu` de la table `eleve`.
+Cela siginfie que les données, même si elles ne sont pas correctes, sont insérées dans la base tampon. Elles ne seront de toutes façon pas exportées vers les ENT si elle sont marquées 'ERROR'.
+Ce choix a été fait initialement, pour permettre aux administrateurs d'établissement de concerver un état consistant des erreurs à corriger, donné sur simple appel de la page de bilan, du fait que la mise à jour des données ne dépendait pas d'eux et était cadencée toutes les nuits.
 
 ## Correspondances des données
 
 ### L'établissement
 Lorsqu'on arrive sur l'interface d'alimentation par CSV, l'établissement est déjà choisi (son code UAI est un paramètre requis pour afficher cet écran).
-Par conséquent, l'établissement existe déjà dans le référentiel de l'annuaire ENT (Si ce n'est pas le cas, charge aux administrateur de l'ENT de l'y ajouter).
+Par conséquent, l'établissement existe déjà dans le référentiel de l'annuaire ENT (Si ce n'est pas le cas, charge aux administrateurs de l'ENT de l'y ajouter).
 Il n'y a donc pas à modifier le référentiel, concernant l'établissement.
 
 ### Les élèves
 
 #### Table *eleve*
-Le problème majeur est que l'extraction CSV ne comporte aucun identifiant unique de la personne. Ce qui veut dire que l'on est obligé de générer cet identifiant unique sur la base des données fournies les plus pérennes.
+Le problème majeur est que l'extraction CSV ne comporte aucun identifiant unique de la personne. Ce qui veut dire que l'on est obligé de générer cet identifiant unique sur la base des données fournies les plus pérennes. 
 
 Pour l'élève, il s'agit de son *nom*, son *prénom* et sa *date de naissance*. 
-En ffet, au sein d'une même académie, il est rare, voir quasiment impossible de tomber sur des doublons en associant ces 3 données.
+En effet, au sein d'une même académie, il est rare, voir quasiment impossible de tomber sur des doublons en associant ces 3 attributs.
 
 La contrainte supplémentaire consiste à générer un identifiant de type `entier` car ceux envoyés par l'académie pour les comptes de collèges sont de ce type, mais dans des plages relativement basse (largement inférieurs à 10 000 000).
 Enfin la dernière contrainte est bien évidemment d'éviter les collisions entre les identifiants issus de l'académie et ceux générés en interne dans l'annuaire ENT pour les comptes issus des fichiers CSV.
@@ -104,7 +104,7 @@ echo get64BitHash("PIERRE-GILLESLEVALLOIS03/07/1970690078K");
 | ENTPersonJointure       | -                       | génération en interne sur la base de la fonction get64BitHash()                          |                      |                                                             |
 | categoriePersonne       | -                       | null                           |                      |                                                             |
 | ENTPersonDateNaissance  | Date naissance          |                                |                      | au format ISO 8601                                         |
-| ENTPersonNomPatro       | Nom Elève               |                                |                      |                                                             |
+| ENTPersonNomPatro       | Nom Elève               |                                |    Majuscules    |                                                             |
 | sn                      | Nom Elève               |                                |                      |                                                             |
 | givenName               | Prénom Elève            |                                |                      |                                                             |
 | ENTPersonAutresPrenoms  | Prénom Elève            |                                |                      |                                                             |
@@ -152,25 +152,23 @@ Dans cette table, chaque classe n'est insérée qu'une seule fois.
 | ClasseStructRattach | -                       | identifiant de l'établissement |                         |                        |
 | ClasseNom           | Niveau                  |                                |                         |                        |
 | ClasseLibelleMEF    | Classe                  |                                |                         |                        |
-| ClasseCodeMEF       | Classe                  |                                | Première partie du code | ????                   |
-| ClasseMEFRattach    | -                       |                                |                         | id de la table MEF ??? |
-| date_last_maj       | -                       |                                |                         |                        |
+| ClasseCodeMEF       | Classe                  |                                | Code MEF issu de la table des MEF |                    |
+| ClasseMEFRattach    | -                       |                                |                         | code issu de la table MEF |
+| date_last_maj       | -                       |                                |                         |  automatiquement renseigné à l'insertion                      |
 
 #### Table des *eleve_classe*
-C'est la table de relation entre les élèves et les classes, il faut donc y ajouter les identifiants respectifs de ces deux tables.
+C'est la table de relation entre les élèves et les classes. Cette table est automatiquement renseignée à l'insertion d'un élève.
 
 ### Les profs
 
 ## Règles de gestion
 
 ## écrans d'import
-Les paramètres requis pour accéder à l'écran d'import sont : 
-- action=csv
-- rne=[un code uai de collège]
+Point d'entrée : *?action=csv&rne=[un code uai de collège]*
 Le breadcrumb est renseigné automatiquement pour cette action.
 
 ### Zonning global
-Ce zonning global est déjà existant. Il est simple : une zone de travail (le déroulement des étapes) et une zone d'aide contextuelle.
+Ce zonning global est déjà existant. Il est simple : une zone de travail (le déroulement des étapes) et une zone d'aide contextuelle. Le texte de la zone d'aide contextuelle sera complété poar Erasme.
 ![images/zonning.png](./images/zonning.png)
 
 ### Etape 1 : Choix du profil d'utilisateurs à importer
@@ -178,18 +176,19 @@ Url d'accès : *?action=csv&rne=[un code uai de collège]*
 Cette étape permet de choisir le type de fichier à importer (eleves, ou profs).
 
 ### Etape 2 : upload du fichier
-Url d'accès : ?action=csv&rne=[un code uai de collège]&profil=[eleve, prof]
+Url d'accès : *?action=csv&rne=[un code uai de collège]&profil=[eleve, prof]*
 Cette étape fait l'upload du fichier, la vérification de sa structure et l'analyse de conformité par rapport aux données attendues.
 Si le fichier n'est pas conforme, un écran d'erreur est affiché, expliquant quelles sont les conditions qui ne sont pas remplies.
 En revanche si le fichier est conforme, le traitement de création des comptes est réalisé.
 
 ### Etape 3 : Compte rendu d'activité
-Ce compte rnedu d'activité est donné par l'url suivante : *?action=rapport&rne=[code UAI]&profil=eleve*
-Le travail côté serveur est donc de rediriger vers cette page qui afficher un état des comptes élèves.
+Ce compte rendu d'activité est donné par l'url suivante : *?action=rapport&rne=[code UAI]&profil=[eleve, prof]*
+Le travail côté serveur est donc de rediriger vers cette page qui affiche un état des comptes élèves ou profs créés.
 
 ## Logging du traitement
 Une classe de log permet d'instrumentaliser simplement le traitement de création de comptes afin qu'il soit possible d'en relire le déroulement à postériori.
 
+_exemple d'usage de la classe de logs_
 ```php
 /* 
 * Classe simple et efficace de gestion de log, création de fichier, écriture, formatage.
