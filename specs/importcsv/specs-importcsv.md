@@ -50,29 +50,6 @@ L'extraction CSV de BASE_ELEVES contient les champs suivants :
 
 Les quatres derniers champs fournis ne sont pas utilisés par le processus d'alimention à mettre en place.
 
-### Le fichiers des parents
-La structure du fichiers des parents est plus complexe puisque la relation 1-n parents <-> enfants est mise à plat dans le fichier.
-Cela signifie que la séquences des derniers champs peut se répéter autant de fois sur la même ligne qu'il y a d'enfants. Ce fichier a donc une structure variable.
-
-- Civilité Responsable    (3 valeurs possibles : M., MME, MLLE)
-- Nom usage responsable
-- Nom responsable
-- Prénom responsable
-- Adresse responsable
-- CP responsable
-- Commune responsable
-- Pays
-- Courriel
-- Téléphone domicile
-- Téléphone travail
-- Numéro de poste
-- Téléphone portable
-Puis les 4 champs répétés autant de fois que d'enfants dans l'école.
-- Nom d'usage enfant
-- Nom de famille enfant
-- Prénom enfant
-- Classes enfants
-
 ### Le fichiers PROFS
 
 ## Structure de l'annuaire ENT
@@ -182,8 +159,6 @@ Dans cette table, chaque classe n'est insérée qu'une seule fois.
 #### Table des *eleve_classe*
 C'est la table de relation entre les élèves et les classes, il faut donc y ajouter les identifiants respectifs de ces deux tables.
 
-### Les parents
-
 ### Les profs
 
 ## Règles de gestion
@@ -200,10 +175,10 @@ Ce zonning global est déjà existant. Il est simple : une zone de travail (le d
 
 ### Etape 1 : Choix du profil d'utilisateurs à importer
 Url d'accès : *?action=csv&rne=[un code uai de collège]*
-Cette étape permet de choisir le type de fichier à importer (eleves, parents, ou profs).
+Cette étape permet de choisir le type de fichier à importer (eleves, ou profs).
 
 ### Etape 2 : upload du fichier
-Url d'accès : ?action=csv&rne=[un code uai de collège]&profil=[eleve, parent, prof]
+Url d'accès : ?action=csv&rne=[un code uai de collège]&profil=[eleve, prof]
 Cette étape fait l'upload du fichier, la vérification de sa structure et l'analyse de conformité par rapport aux données attendues.
 Si le fichier n'est pas conforme, un écran d'erreur est affiché, expliquant quelles sont les conditions qui ne sont pas remplies.
 En revanche si le fichier est conforme, le traitement de création des comptes est réalisé.
