@@ -13,7 +13,7 @@ Le fichiers demandé aux administrateurs et  à destination de l'annuaire ENT es
 
 Cette interface est branchée au plus haut niveau de gestion des comptes, l'annuaire ENT, qui ensuite dispatche les comptes dans les 2 versions de l'ENT V2 et V3.
 
-*Le traitement prendra en entrée les données des fichiers CSV et les transformera dans les formats utilisées par les api d'insertion/modification de base de données qui sont déjà alimentée par l'analyse des fichiers XMl.* Cette partie est spécifiée plus bas dans ce document.
+*Le traitement prendra en entrée les données des fichiers CSV et les transformera dans les formats utilisées par les api d'insertion/modification de base de données qui sont déjà alimentée par l'analyse des fichiers XML.* Cette partie est spécifiée plus bas dans ce document.
 
 ![./images/interfacage-csv.png](./images/interfacage-csv.png)
 
@@ -167,7 +167,7 @@ Voici un exemple de ce qu'on peut trouver dans le fichier csv :(
 | CYCLE III | CM2 | 04 COURS MOYEN 1 ET 2 | 00310002220 |
 
 
-#### Table des *classe*
+#### Table *classe*
 Dans cette table, chaque classe n'est insérée qu'une seule fois.
 
 | Table aaf.classe     | Données du fichiers CSV | Génération                     | Transformation          | Commentaire            |
@@ -195,7 +195,7 @@ Les paramètres requis pour accéder à l'écran d'import sont :
 Le breadcrumb est renseigné automatiquement pour cette action.
 
 ### Zonning global
-Ce zonneing global est déjà existant. Il est simple : une zone de travail (le déroulement des étapes) et une zone d'aide contextuelle.
+Ce zonning global est déjà existant. Il est simple : une zone de travail (le déroulement des étapes) et une zone d'aide contextuelle.
 ![images/zonning.png](./images/zonning.png)
 
 ### Etape 1 : Choix du profil d'utilisateurs à importer
