@@ -26,6 +26,10 @@ Pour créer un blog il faut définir :
 ### Suppression d'un blog
 Seul l'utilisateur Administrator du blog ou un utilisateur Super Admin peut supprimer un blog.
 
+1. L'utilisateur loggué possédant les prérequis ouvre l'application Blogs,
+2. il passe en mode modification en cliquant l'icône flottante,
+3. il retourne la case du blog qu'il souhaite supprimer et clique le bouton correspondant à l'action de suppression.
+
 ## Interface
 
 L'application reprends le principe du damier des applications du portail de laclasse.com :
@@ -64,13 +68,10 @@ Devient souscripteur du blog existant, pas de création de blog.
 
 #### Backend
 
-  - Mysql
+  - Il ne semble pas nécessaire de stocker des données localement, l'application ne faisant qu'ajouter une interface sur les APIs existantes.
 
 #### Client
 
   - Angular JS
-
-## Reprise de données
-??
 
 ## Résumé des règles fonctionnelles importantes
