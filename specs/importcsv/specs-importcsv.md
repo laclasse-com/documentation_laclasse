@@ -13,7 +13,9 @@ Le fichiers demandé aux administrateurs et  à destination de l'annuaire ENT es
 
 Cette interface est branchée au plus haut niveau de gestion des comptes, l'annuaire ENT, qui ensuite dispatche les comptes dans les 2 versions de l'ENT V2 et V3.
 
-*Le traitement prendra en entrée les données des fichiers CSV et les transformera dans les formats utilisées par les api d'insertion/modification de base de données.* Cette partie est spécifiée plus bas dans ce document.
+*Le traitement prendra en entrée les données des fichiers CSV et les transformera dans les formats utilisées par les api d'insertion/modification de base de données qui sont déjà alimentée par l'analyse des fichiers XMl.* Cette partie est spécifiée plus bas dans ce document.
+
+![./images/interfacage-csv.png](./images/interfacage-csv.png)
 
 Les développements devront s'intégrer dans l'existant, en utilisant au maximum les fonctions, commandes et classes existantes. Il n'est pas demandé dans ce travail de refactorer l'ensemble de l'application, néanmoins des propositions de refactoring pourront être faites en fin de projet.
 
