@@ -162,6 +162,46 @@ C'est la table de relation entre les élèves et les classes. Cette table est au
 ### Les profs
 
 ## Règles de gestion
+Pour toutes ces mises à jour, il suffit de générer une structure php aux normes de ce que comprend l'api d'insertion.
+Le traitement d'API prend en paramètre un tableau structuré (initiallement issue du parsing XML des fichiers académiques).
+Il est à noter que certains attributs sont multivalués, aisni donc, chaque attribut prend comme valeur un potentiel tableau php.
+Cette structure comprend l'intégralité des élèves parsés dans le fichier CSV.
+La structure attendue pour l'appel à `insert_eleve`est la suivante :
+
+```php
+t [0] => {
+    'categoriePersonne' => 		{ [0] => ... }
+    'ENTPersonJointure' => 		{ [0] => ... }
+    'ENTEleveStructRattachId' =>{ [0] => ... }
+    'ENTPersonDateNaissance' => { [0] => ... }
+    'ENTPersonNomPatro' => 		{ [0] => ... }
+    'sn' => 					{ [0] => ... }
+    'givenName' => 				{ [0] => ... }
+    'ENTPersonAutresPrenoms' => { [0] => ... }
+    'personalTitle' => 			{ [0] => ... }
+    'ENTEleveBoursier' => 		{ [0] => ... }
+    'ENTEleveRegime' => 		{ [0] => ... }
+    'ENTEleveTransport' => 		{ [0] => ... }
+    'ENTEleveStatutEleve' => 	{ [0] => ... }
+    'ENTEleveMEF' => 			{ [0] => ... }
+    'ENTEleveLibelleMEF' => 	{ [0] => ... }
+    'ENTEleveNivFormation' => 	{ [0] => ... }
+    'ENTEleveFiliere' => 		{ [0] => ... }
+    'ENTPersonStructRattach' => { [0] => ... }
+    'ENTEleveClasses' => { 
+    		[0] => {
+    		'ClasseStructRattach' => 	{ [0] => ... } 
+    		'ClasseNom' => 				{ [0] => ... }
+    		'ClasseLibelleMEF' => 		{ [0] => ... } 
+    		'ClasseCodeMEF' => 			{ [0] => ... } 
+    		'ClasseMEFRattach' => 		{ [0] => ... }
+    		'date_last_maj' => 			{ [0] => ... }
+    	}
+    }
+  },
+t[1] => ...
+
+```
 
 ## écrans d'import
 Point d'entrée : *?action=csv&rne=[un code uai de collège]*
