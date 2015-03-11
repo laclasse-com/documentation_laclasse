@@ -19,8 +19,28 @@ Il existe 3 types de blogs :
 Une fois connecté sur laclasse.com l'utilisateur peut (en fonction de son profil et de ses droits) :
 * consulter la liste des blogs auxquels il participe,
 * gérer sa participation à un blog,
+  * souscrire,
+  * se désinscrire.
 * créer un blog,
 * supprimer un blog existant.
+
+### Points d'entrée par type de profil
+
+#### ADMIN
+Devient super-administreur de tout les blogs, pas de création de blog.
+
+#### PROF, ADM_ETB, CPE, PRINCIPAL
+Deviennent administrateur de leur domaine si le domaine n'existe pas, avec création de blog, sinon devient éditeur du blog existant.
+
+#### PRINCIPAL
+Si le blog est celui de son établissement : Devient administrateur de son domaine.
+Pour tous les autres blogs, voir la règle ci dessus (profs, cpe, adm_etb).
+
+#### ELEVE
+Devient contributeur du blog existant dans le domaine, pas de création de blog.
+
+#### PARENT
+Devient souscripteur du blog existant, pas de création de blog.
 
 ### Liste des blogs de l'utilisateur
 (Où récupérer les blogs accessibles par un utilisateur ?)
@@ -58,25 +78,6 @@ L'application reprends le principe du damier des applications du portail de lacl
 * l'utilisateur peut filter par type de blog, nom
 * L'ajout, la modification et la suppression se fait en passant en mode « modification » en cliquant sur une icône ronde en surimpression. Dans ce mode « modification » les cases sont retournables pour éditer le nom du blog, la couleur de la case ainsi que différents paramètres à définir ; les cases sont ré-arrangeables ; les cases sont supprimable ce qui entraine la suppression du blog proprement dit. La création de blog se fait dans une popup (similaire à l'ajour d'application au portail.)
 
-### Points d'entrée par type de profil
-
-#### ADMIN
-Devient super-administreur de tout les blogs, pas de création de blog.
-
-#### PROF, ADM_ETB, CPE, PRINCIPAL
-Deviennent administrateur de leur domaine si le domaine n'existe pas,
-avec création de blog, sinon devient éditeur du blog existant.
-
-#### PRINCIPAL
-Si le blog est celui de son établissement : Devient administrateur de son domaine.
-Pour tous les autres blogs, voir la règle ci dessus (profs, cpe, adm_etb).
-
-#### ELEVE
-Devient contributeur du blog existant dans le domaine, pas de création de blog.
-
-#### PARENT
-Devient souscripteur du blog existant, pas de création de blog.
-
 ## Cadre technique
 
 ### Développements
@@ -93,5 +94,4 @@ Devient souscripteur du blog existant, pas de création de blog.
 #### Client
 
   - Angular JS
-
-## Résumé des règles fonctionnelles importantes
+  - Éléments mutualisés de laclasse.com
