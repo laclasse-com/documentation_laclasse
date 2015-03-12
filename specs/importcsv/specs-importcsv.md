@@ -52,6 +52,13 @@ Les quatres derniers champs fournis ne sont pas utilisés par le processus d'ali
 
 ### Le fichiers PROFS
 
+Le fichier prof ne sera pas issu de BASE_ELEVE, mais constitué de toute pièce avec les attributs suivants.
+- civilite
+- nom
+- prenom
+- mailAcademique
+- niveau   (On doit trouve dans ce champs le niveau de la classe CP, CE1 , CE2, CM1 , CM2)
+
 ## Structure de l'annuaire ENT
 ### l'UID unique
 A chaque utilisateur est affecté un uid unique normé par l'annexe du SDET concernant l'annuaire ENT. Une fonction php permet de récupérer un UID en fonction de certains paramètres, notamment l'identifiant de jointure.
@@ -161,7 +168,32 @@ C'est la table de relation entre les élèves et les classes. Cette table est au
 
 ### Les profs
 
+#### table `pers_educ_nat`
+Ici aussi, le fichier CSV ne fournira pas d'identifiant unique. il faudra donc le générer sur la base de la fonction get64BitHash(), à laquelle on passera l'adresse email académique.
+
+| Table aaf.pers_educ_nat        | Données du fichiers CSV | Génération                     | Transformation          | Commentaire     |
+|--------------------------------|-------------------------|--------------------------------|-------------------------|-----------------| 
+| categoriePersonne              | - |  |  |  | 
+| ENTPersonJointure              | - | génération en interne sur la base de la fonction get64BitHash() |  |  | 
+| ENTPersonDateNaissance         | - |  |  |  | 
+| ENTPersonNomPatro              | nom |  |  |  | 
+| sn                             | nom |  |  |  | 
+| givenName                      | prenom |  |  |  | 
+| personalTitle                  | civilite |  |  |  | 
+| mail                           | mailAcademique |  |  |  | 
+| ENTAuxEnsCategoDiscipline      | - |  |  |  | 
+| PersEducNatPresenceDevantEleves| - | 'O' |  |  | 
+| ENTPersonAdresse               | - |  |  |  | 
+| ENTPersonCodePostal            | - |  |  |  | 
+| ENTPersonVille                 | - |  |  |  | 
+| ENTPersonPays                  | - |  |  |  | 
+| ENTAuxEnsClassesMatieres       |  Niveau |  |  [idEtablissement]$[Niveau de la classe]$023500  | Ce champ doit être généré avec l'identifiant de l'établissement, le niveau de la classe et le xode matière 023500, concaténés et spéparés par le caractère '$'              | 
+| ENTAuxEnsClassesPrincipal      | - | 'O' |  |  | 
+| ENTPersonStructRattach         | - | [idEtablissement] |  |  | 
+
 ## Règles de gestion
+
+### Pour les élèves
 Pour toutes ces mises à jour, il suffit de générer une structure php aux normes de ce que comprend l'api d'insertion.
 Le traitement d'API prend en paramètre un tableau structuré (initiallement issue du parsing XML des fichiers académiques).
 Il est à noter que certains attributs sont multivalués, aisni donc, chaque attribut prend comme valeur un potentiel tableau php.
@@ -201,6 +233,30 @@ t [0] => {
   },
 t[1] => ...
 
+```
+### Pour les Prof (personnels de l'éducation nationale).
+La struction à générer à  a passer à l'api d'insertion `insert_pers_educ_nat` est la suivante.
+A noter qu'un certain nombre de champs ne seron pas renseignés ou seront renseigné avec des valeurs en dur. C'est le cas pour la metière par exemple. La raison est que le référentiel des matières est adapté au secondaire, mais pas au primaire.
+
+```php
+"categoriePersonne" => { [0] => ... }
+"ENTPersonJointure" => { [0] => ... }
+"ENTPersonDateNaissance" => { [0] => ... }
+"ENTPersonNomPatro" => { [0] => ... }
+"sn" => { [0] => ... }
+"givenName" => { [0] => ... }
+"personalTitle" => { [0] => ... }
+"mail" => { [0] => ... }
+"ENTAuxEnsCategoDiscipline" => { [0] => ... }
+"PersEducNatPresenceDevantEleves" => { [0] => 'O' }
+"ENTPersonAdresse" => { [0] => ... }
+"ENTPersonCodePostal" => { [0] => ... }
+"ENTPersonVille" => { [0] => ... }
+"ENTPersonPays" => { [0] => ... }
+"PersEducNatPresenceDevantEleves" => { [0] => 'O' }
+"ENTAuxEnsClassesMatieres" => { [0] =>  [idEtablissement]$[Niveau de la classe]$023500 }
+"ENTAuxEnsClassesPrincipal" => { [0] => 'O'] }
+"ENTPersonStructRattach" => { [0] => [idEtablissement] }
 ```
 
 ## écrans d'import
