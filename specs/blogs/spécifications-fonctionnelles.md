@@ -128,7 +128,7 @@ Sur la partie gauche de l'écran, un algorithme de suggestion permettra de faire
 
 #### Backend
 
-  - Il ne semble pas nécessaire de stocker des données localement, l'application ne faisant qu'ajouter une interface sur les APIs existantes.
+  - Toutes les données nécessaire à cette application seront stockées dans l'annuaire.
 
 #### Client
 
