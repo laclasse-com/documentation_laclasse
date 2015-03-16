@@ -117,6 +117,11 @@ Sur la partie gauche de l'écran, un algorithme de suggestion permettra de faire
 - blog de groupes libres ? un au hasard ? 
 - Blogs de projets estampillés Erasme (certains blogs marqué par les Admins de la métropole, sur des projets particuliers)
 
+Le passage en mode" gestion de la page" passe tous les carrés en mode administration (comme sur le portail).
+Cela permet de gérer la couleur et l'ordre d'affichage.
+
+![./images/carre.png](./images/carre.png)
+
 ## Cadre technique
 
 ### Développements
