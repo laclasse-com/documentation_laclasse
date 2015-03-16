@@ -48,7 +48,21 @@ Pour créer un blog il faut définir :
   - CLS : Blogs de classes.
   - GRP : Blogs de groupe d'élèves
   - GPL : Blogs de groupes de Groupe libres.
+* son nom de sous-domaine : [sous-domaine].blogs.laclasse.com
 
+Le tableau ci-dessous répertorie quel profil peut créer quel type de blog, sachant que seul le super-administrateur travaille sur la totalité des établissements de l'ENT. Les autres profils, lorsqu'ils possèdent les droits de création, ne l'ont que sur le périmètre de leur(s) établissement(s) de rattachement.
+
+| Profil \ type de blog | ETB | CLS | GRP | GPL | 
+|-----------------------|-----|-----|-----|-----|
+| SUPERADMIN | x | x | x | x |
+| ADMIN ETAB | x | x | x | x |
+| PRINCIPAL | x | x | x | x |
+| PROF |   | x | x | x |
+| CPE |   | x | x | x |
+| ELEVE |   |   |   |   |
+| PARENT |   |   |   |   |
+
+ 
 ### Liste des blogs de l'utilisateur
 Un moteur de recherche permet à l'utilisateur de retrouver des blogs dans la liste des blogs.
 Selon les profils le périmètre de recherche sera différent.
