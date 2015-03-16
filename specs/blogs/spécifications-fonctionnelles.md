@@ -9,10 +9,9 @@ Le module de Pilotage de la plateforme de blogs est un composant de l'ancienne v
 
 La plateforme de blog se base sur WordPress qu'un plugin spécifique permet de piloté
 
-Il existe 3 types de blogs :
+Il existe 2 types de blogs :
 * blog d'établissement
 * blog de regroupement (classe, groupe d'élève, groupe libre)
-* blog personnel
 
 Une fois connecté sur laclasse.com l'utilisateur peut (en fonction de son profil et de ses droits) :
 * consulter la liste des blogs auxquels il participe,
