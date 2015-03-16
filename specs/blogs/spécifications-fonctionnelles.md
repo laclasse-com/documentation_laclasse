@@ -3,9 +3,7 @@
 
 ## Introduction
 
-Le module de Pilotage de la plateforme de blogs est un composant de l'ancienne version de laclasse.com. Il doit être ré-écrit pour la version 3.
-
-Il sera ré-écrit à iso-fonctionnalité de la version existante.
+Le module de Pilotage de la plateforme de blogs est un composant de l'ancienne version de laclasse.com. 
 
 ## Description fonctionnelle
 
@@ -72,11 +70,20 @@ Seul l'utilisateur Administrator du blog ou un utilisateur Super Admin peut supp
 
 ## Interface
 
-L'application reprends le principe du damier des applications du portail de laclasse.com :
+L'application reprend le principe du damier des applications du portail de laclasse.com :
 * un carré par blog accessible par l'utilisateur affiché sur un damier de 4✕4
-* s'il y a plus de 16 blogs à afficher la liste scrolle verticalement
-* l'utilisateur peut filter par type de blog, nom
-* L'ajout, la modification et la suppression se fait en passant en mode « modification » en cliquant sur une icône ronde en surimpression. Dans ce mode « modification » les cases sont retournables pour éditer le nom du blog, la couleur de la case ainsi que différents paramètres à définir ; les cases sont ré-arrangeables ; les cases sont supprimable ce qui entraine la suppression du blog proprement dit. La création de blog se fait dans une popup (similaire à l'ajour d'application au portail.)
+* s'il y a plus de 16 blogs à afficher la liste défile verticalement
+* l'utilisateur peut filtrer par type de blog, par nom.
+* L'ajout, la modification et la suppression se fait en passant en mode « modification » en cliquant sur une icône ronde en surimpression (même mode que le mode de paramétrage du portail v3). 
+Dans ce mode « modification » les cases sont retournables et une fois retrounées, elles permettent les actions suivantes :
+    - Edition le nom du blog, 
+    - Paramétrage de la couleur de la case.
+    - Désinscription d'un blog
+   
+* Les cases sont arrangeables; 
+* les cases sont supprimables ce qui entraine la désinscription de l'utilisateur au blog .
+* La suppression d'un blog se fait avec un bouton "supprimer" sur l'envers de la case qui n'est affiché que si l'utilisateur a les droits reequis pour supprimer un blog. 
+* La création de blog se fait dans une popup (similaire à l'ajout d'application au portail.)
 
 ## Cadre technique
 
