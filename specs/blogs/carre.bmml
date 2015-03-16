@@ -1,0 +1,23 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="656" measuredH="308" mockupW="129" mockupH="136">
+  <controls>
+    <control controlID="6" controlTypeID="__group__" x="527" y="172" w="129" h="136" measuredW="129" measuredH="136" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Image" x="0" y="0" w="129" h="136" measuredW="212" measuredH="223" zOrder="0" locked="false" isInGroup="6">
+          <controlProperties>
+            <src>../../../../Downloads/carre%u0301-publi.png</src>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="16" w="129" h="119" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="6">
+          <controlProperties>
+            <borderColor>9684093</borderColor>
+            <color>9684093</color>
+            <shape>rectangle</shape>
+            <size>20</size>
+            <text>Blog%0Ade%20la%20%0Aclasse%0Ade%205A</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>
