@@ -109,6 +109,14 @@ Dans ce mode « modification » les cases sont retournables et une fois retroun�
 * La suppression d'un blog se fait avec un bouton "supprimer" sur l'envers de la case qui n'est affiché que si l'utilisateur a les droits reequis pour supprimer un blog. 
 * La création de blog se fait dans une popup (similaire à l'ajout d'application au portail.)
 
+![./images/ihm.png](./images/ihm.png)
+
+Sur la partie gauche de l'écran, un algorithme de suggestion permettra de faire une liste d'au maximum 5 blogs succeptibles d'intéresser l'utilisateur. Ceci ne concerne que les blogs auquels il ne serait pas rattaché. Les critères sont les suivants :
+- Blog de ses établissements (tous les profils sont concernés)
+- Blog de classes et groupes d'élèves (profils profs, principaux, cpe, élèves, parents)
+- blog de groupes libres ? un au hasard ? 
+- Blogs de projets estampillés Erasme (certains blogs marqué par les Admins de la métropole, sur des projets particuliers)
+
 ## Cadre technique
 
 ### Développements
@@ -120,7 +128,7 @@ Dans ce mode « modification » les cases sont retournables et une fois retroun�
 
 #### Backend
 
-  - Il ne semble pas nécessaire de stocker des données localement, l'application ne faisant qu'ajouter une interface sur les APIs existantes.
+  - Toutes les données nécessaire à cette application seront stockées dans l'annuaire.
 
 #### Client
 
