@@ -82,14 +82,11 @@ Deux critères sont définis :
 | ELEVE | Etablissement | Les siens | Les siens | Tous |
 | PARENT | Etablissement | Les siens | Les siens | Tous |
 
-
-
-
 ### Désinscription d'un blog
-L'utilisateur peut se désinscrire d'un blog auquel il est inscrit.
+L'utilisateur peut se désinscrire d'un blog auquel il est inscrit. Cette désinscription entraîne la suppression de son profil WordPress pour le blogs concerné, mais pas la suppression de son compte WordPress. Il peut, en effet, rester rattéché à d'autres blogs.
 
 ### Suppression d'un blog
-Seul l'utilisateur Administrator du blog ou un utilisateur Super Admin peut supprimer un blog.
+Seul l'utilisateur "Administrator" (en temps que profil WordPress) du blog ou un utilisateur Super Admin peut supprimer un blog.
 
 1. L'utilisateur loggué possédant les prérequis ouvre l'application Blogs,
 2. il passe en mode modification en cliquant l'icône flottante,
