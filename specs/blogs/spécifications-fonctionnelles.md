@@ -40,22 +40,36 @@ Devient contributeur du blog existant dans le domaine, pas de création de blog.
 #### PARENT
 Devient souscripteur du blog existant, pas de création de blog.
 
-### Liste des blogs de l'utilisateur
-(Où récupérer les blogs accessibles par un utilisateur ?)
-
-* un utilisateur SuperAdmin vois tous les blogs,
-* un utilisateur non Superadmin vois les blogs auxquels il participe.
-
 ### Création d'un blog
 Seuls les profils PROF, ADM_ETB, CPE, PRINCIPAL peuvent créer un blog.
 Pour créer un blog il faut définir :
 * son titre,
 * son type :
-  - CLS : Blogs de classes.
   - ETB : BLogs d'établissement ( page d'établissement).
+  - CLS : Blogs de classes.
   - GRP : Blogs de groupe d'élèves
-  - ENV : Blogs de groupes de travail.
-  - USR : Blogs personnels.
+  - GPL : Blogs de groupes de Groupe libres.
+
+### Liste des blogs de l'utilisateur
+Un moteur de recherche permet à l'utilisateur de retrouver des blogs dans la liste des blogs.
+Selon les profils le périmètre de recherche sera différent.
+Le tableau suivant récapitule le périmetre du moteur de recherche des blogs selon le type de blog et le profil utilisateur.
+Deux critères sont définis :
+ - Tous : tous les blogs de ce type sans restriction par établissement
+ - Etablissement : tous les blogs dépendant des établissemetns de l'utilisateur, sans restrictions par rapport à ses rattachements de classes et de groupes.
+ - Les siens : Les blogs dépendants des rattachements (classes, groupes) de l'utilisateur
+
+| Profil \ type de blog | ETB | CLS | GRP | GPL | 
+|-----------------------|-----|-----|-----|-----|
+| SUPERADMIN | Tous | Tous | Tous | Tous |
+| ADMIN ETAB | Etablissement | Etablissement | Etablissement | Tous |
+| PRINCIPAL | Etablissement | Etablissement | Etablissement | Tous |
+| PROF | Etablissement | Les siens | Les siens | Tous |
+| CPE | Etablissement | Les siens | Les siens | Tous |
+| ELEVE | Etablissement | Les siens | Les siens | Tous |
+| PARENT | Etablissement | Les siens | Les siens | Tous |
+
+
 
 
 ### Désinscription d'un blog
