@@ -32,11 +32,8 @@ Les paramètres d'entrée sont les suivants :
 - debug : mode traçage des actions (qui sont réalisées, mais sans redirection finale).
 - action : Par défaut l'action est le provisioning (création de user, de blog et redirection).
 
-SUPPRIMER_BLOG : suppression physique du blog.
-
 - idAncienBlogEnt : identifiant dans l'ENT de l'ancien blog à migrer vers WordPress.
 Utilisé dans la création de l'article par défaut.
 
 Règle particulière pour le super Admin :
-S'il arrive sur le wpmu sans les paramètres blogname et blogtype il est qd
-même routé sur l'administration de tout les blogs.
+S'il arrive sur WordPress sans les paramètres blogname et blogtype il est quand même routé sur l'administration de tout les blogs.
