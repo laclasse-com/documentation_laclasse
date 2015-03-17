@@ -120,7 +120,11 @@ Sur la partie gauche de l'écran, un algorithme de suggestion permettra de faire
 Le passage en mode" gestion de la page" passe tous les carrés en mode administration (comme sur le portail).
 Cela permet de gérer la couleur et l'ordre d'affichage.
 
+Un clic sur le picto "paramétrage" fait basculer le carré de sorte qu'il présent son envers. Ce nouvel afficahge permet de présenter les fonctions de désinscription, de suppression du blog (si les droits l'autorise), et de récupération de l'url du flux rss du blog (cela permet d'ajoter ce flux rss dans le lecteur rss de la page d'accueil).
+
 ![./images/carre.png](./images/carre.png)
+
+![./images/carre-envers.png](./images/-envers.png)
 
 ## Cadre technique
 
