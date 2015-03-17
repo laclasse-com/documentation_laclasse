@@ -147,3 +147,10 @@ Un clic sur le picto "paramétrage" fait basculer le carré de sorte qu'il prés
 
   - Angular JS
   - Éléments mutualisés de laclasse.com
+  
+## Annexes
+### DOcumentation sur le fonctionnement du plugin de pilotage et provisionning de WordPress
+
+![controleur_ENT.md](controleur_ENT.md)
+
+
