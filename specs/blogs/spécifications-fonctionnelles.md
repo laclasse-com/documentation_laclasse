@@ -1,4 +1,4 @@
-# Module de Pilotage de la plateforme de blogs / Laclasse.com /V3.
+# Intégration de la plateforme de blogs à Laclasse.com V3.
 # Spécifications fonctionnelles
 
 ## Introduction
