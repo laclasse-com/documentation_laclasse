@@ -4,10 +4,12 @@
 ## Introduction
 
 Le module de Pilotage de la plateforme de blogs est un composant de l'ancienne version de laclasse.com. 
+Ce composant ne sera pas ré-écrit, car il est fonctionnel et stable.
+Le travail consistera à concevoir et coder une interface IHM qui sera le fornt-end d'intégration dans le portail V3, de la plateforme de blog.
 
 ## Description fonctionnelle
 
-La plateforme de blog se base sur WordPress qu'un plugin spécifique permet de piloté
+La plateforme de blog se base sur WordPress qu'un plugin spécifique permet de piloter depuis l'ENT, tant en terme de provisinning des comptes, que de création, suppression de blogs, ainsi que de recherche d'existence de blogs ou d'utilisateurs.
 
 Il existe 2 types de blogs :
 * blog d'établissement
@@ -23,21 +25,23 @@ Une fois connecté sur laclasse.com l'utilisateur peut (en fonction de son profi
 
 ### Points d'entrée par type de profil
 
+Le plugin de pilotage de WordPress, fait le mapping entre les profils Laclasse.com et les profils définis dans WordPress en appliquant des règles fonctionnelles adaptées au métier des collèges.
+
 #### ADMIN
-Devient super-administreur de tout les blogs, pas de création de blog.
+Devient *super-administreur* de tout les blogs, pas de création de blog.
 
 #### PROF, ADM_ETB, CPE, PRINCIPAL
-Deviennent administrateur de leur domaine si le domaine n'existe pas, avec création de blog, sinon devient éditeur du blog existant.
+Deviennent *administrateur* de leur domaine si le sous-domaine n'existe pas, avec création de blog, sinon devient *éditeur* du blog existant.
 
 #### PRINCIPAL
-Si le blog est celui de son établissement : Devient administrateur de son domaine.
+Si le blog est celui de son établissement : Devient *administrateur* de son sous-domaine.
 Pour tous les autres blogs, voir la règle ci dessus (profs, cpe, adm_etb).
 
 #### ELEVE
-Devient contributeur du blog existant dans le domaine, pas de création de blog.
+Devient *contributeur* du blog existant dans le domaine, pas de création de blog.
 
 #### PARENT
-Devient souscripteur du blog existant, pas de création de blog.
+Devient *souscripteur* du blog existant, pas de création de blog.
 
 ### Création d'un blog
 Seuls les profils PROF, ADM_ETB, CPE, PRINCIPAL peuvent créer un blog.
@@ -124,7 +128,7 @@ Un clic sur le picto "paramétrage" fait basculer le carré de sorte qu'il prés
 
 ![./images/carre.png](./images/carre.png)
 
-![./images/carre-envers.png](./images/-envers.png)
+![./images/carre-envers.png](./images/carre-envers.png)
 
 ## Cadre technique
 
