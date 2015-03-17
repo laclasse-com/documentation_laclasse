@@ -73,7 +73,7 @@ Selon les profils le périmètre de recherche sera différent.
 Le tableau suivant récapitule le périmetre du moteur de recherche des blogs selon le type de blog et le profil utilisateur.
 Deux critères sont définis :
  - Tous : tous les blogs de ce type sans restriction par établissement
- - Etablissement : tous les blogs dépendant des établissemetns de l'utilisateur, sans restrictions par rapport à ses rattachements de classes et de groupes.
+ - Etablissement : tous les blogs dépendant des établissements de l'utilisateur, sans restrictions par rapport à ses rattachements de classes et de groupes.
  - Les siens : Les blogs dépendants des rattachements (classes, groupes) de l'utilisateur
 
 | Profil \ type de blog | ETB | CLS | GRP | GPL | 
@@ -115,11 +115,14 @@ Dans ce mode « modification » les cases sont retournables et une fois retroun�
 
 ![./images/ihm.png](./images/ihm.png)
 
-Sur la partie gauche de l'écran, un algorithme de suggestion permettra de faire une liste d'au maximum 5 blogs succeptibles d'intéresser l'utilisateur. Ceci ne concerne que les blogs auquels il ne serait pas rattaché. Les critères sont les suivants :
+Sur la partie gauche de l'écran, un algorithme de suggestion permettra de faire une liste d'au maximum 5 blogs succeptibles d'intéresser l'utilisateur. Ceci ne concerne que les blogs auquels il ne serait pas rattaché. Il est possible que l'algorithme de suggestion ne retourne rien, si l'utilisateur est rattaché à tout ce qui peut le concerner. 
+
+Les critères sont les suivants :
 - Blog de ses établissements (tous les profils sont concernés)
 - Blog de classes et groupes d'élèves (profils profs, principaux, cpe, élèves, parents)
 - blog de groupes libres ? un au hasard ? 
 - Blogs de projets estampillés Erasme (certains blogs marqué par les Admins de la métropole, sur des projets particuliers)
+
 
 Le passage en mode" gestion de la page" passe tous les carrés en mode administration (comme sur le portail).
 Cela permet de gérer la couleur et l'ordre d'affichage.
