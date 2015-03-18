@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1193" measuredH="429" mockupW="947" mockupH="373">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1193" measuredH="541" mockupW="947" mockupH="485">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="425" y="85" w="473" h="344" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1"/>
     <control controlID="29" controlTypeID="__group__" x="583" y="114" w="314" h="314" measuredW="314" measuredH="314" zOrder="1" locked="false" isInGroup="-1">
@@ -126,25 +126,21 @@
         <text>%3C--%20Administrer%20de%20cette%20page%20%28g%E9rer%20mes%20blogs%29</text>
       </controlProperties>
     </control>
-    <control controlID="35" controlTypeID="com.balsamiq.mockups::Title" x="611" y="135" w="-1" h="-1" measuredW="26" measuredH="43" zOrder="7" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>+</text>
-      </controlProperties>
-    </control>
-    <control controlID="36" controlTypeID="com.balsamiq.mockups::Label" x="309" y="133" w="-1" h="-1" measuredW="91" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Label" x="655" y="466" w="-1" h="-1" measuredW="91" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Ajouter%20un%20blog</text>
       </controlProperties>
     </control>
-    <control controlID="37" controlTypeID="com.balsamiq.mockups::Arrow" x="309" y="151" w="302" h="10" measuredW="150" measuredH="100" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Arrow" x="751" y="414" w="79" h="66" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <color>6989903</color>
         <curvature>0</curvature>
+        <direction>bottom</direction>
         <leftArrow>false</leftArrow>
       </controlProperties>
     </control>
-    <control controlID="38" controlTypeID="com.balsamiq.mockups::Arrow" x="729" y="77" w="212" h="48" measuredW="150" measuredH="100" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Arrow" x="729" y="77" w="212" h="48" measuredW="150" measuredH="100" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <color>6989903</color>
@@ -154,47 +150,47 @@
         <rightArrow>false</rightArrow>
       </controlProperties>
     </control>
-    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="941" y="56" w="-1" h="-1" measuredW="170" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="941" y="56" w="-1" h="-1" measuredW="170" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1.%20Blogs%20des%20l%27%E9tablissements</text>
       </controlProperties>
     </control>
-    <control controlID="40" controlTypeID="com.balsamiq.mockups::Label" x="665" y="125" w="72" h="-1" measuredW="61" measuredH="59" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Label" x="665" y="125" w="72" h="-1" measuredW="61" measuredH="59" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
         <size>11</size>
         <text>Blog%20du%5CrColl%E8ge%5Crdu%5CrVal%20d%27Argent</text>
       </controlProperties>
     </control>
-    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="743" y="125" w="72" h="-1" measuredW="49" measuredH="59" zOrder="13" locked="false" isInGroup="-1">
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="743" y="125" w="72" h="-1" measuredW="49" measuredH="59" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
         <size>11</size>
         <text>Blog%5Crde%20la%5Crclasse%20de%5Cr5A</text>
       </controlProperties>
     </control>
-    <control controlID="42" controlTypeID="com.balsamiq.mockups::Label" x="821" y="127" w="72" h="-1" measuredW="49" measuredH="59" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Label" x="821" y="127" w="72" h="-1" measuredW="49" measuredH="59" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
         <size>11</size>
         <text>Blog%5Crde%20la%5Crclasse%20de%5Cr4C</text>
       </controlProperties>
     </control>
-    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="588" y="200" w="72" h="-1" measuredW="51" measuredH="59" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="588" y="200" w="72" h="-1" measuredW="51" measuredH="59" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
         <size>11</size>
         <text>Blog%5Crdu%5Crgroupe%20de%5Cr5A%20Latin</text>
       </controlProperties>
     </control>
-    <control controlID="44" controlTypeID="com.balsamiq.mockups::Label" x="665" y="200" w="72" h="-1" measuredW="48" measuredH="46" zOrder="16" locked="false" isInGroup="-1">
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Label" x="665" y="200" w="72" h="-1" measuredW="48" measuredH="46" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
         <size>11</size>
         <text>Blog%5Crdes%20profs%5Crde%20latin</text>
       </controlProperties>
     </control>
-    <control controlID="45" controlTypeID="com.balsamiq.mockups::Arrow" x="246" y="224" w="350" h="10" measuredW="150" measuredH="100" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Arrow" x="246" y="224" w="350" h="10" measuredW="150" measuredH="100" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <color>6989903</color>
@@ -203,12 +199,12 @@
         <rightArrow>true</rightArrow>
       </controlProperties>
     </control>
-    <control controlID="46" controlTypeID="com.balsamiq.mockups::Label" x="246" y="206" w="-1" h="-1" measuredW="179" measuredH="21" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Label" x="246" y="206" w="-1" h="-1" measuredW="179" measuredH="21" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <text>3.%20blogs%20des%20groupes%20d%27%E9l%E8ves</text>
       </controlProperties>
     </control>
-    <control controlID="47" controlTypeID="com.balsamiq.mockups::Arrow" x="809" y="142" w="288" h="10" measuredW="150" measuredH="100" zOrder="19" locked="false" isInGroup="-1">
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Arrow" x="809" y="142" w="288" h="10" measuredW="150" measuredH="100" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <color>6989903</color>
@@ -218,12 +214,12 @@
         <rightArrow>false</rightArrow>
       </controlProperties>
     </control>
-    <control controlID="48" controlTypeID="com.balsamiq.mockups::Label" x="983" y="125" w="-1" h="-1" measuredW="123" measuredH="21" zOrder="20" locked="false" isInGroup="-1">
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Label" x="983" y="125" w="-1" h="-1" measuredW="123" measuredH="21" zOrder="19" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2.%20Blogs%20des%20classes</text>
       </controlProperties>
     </control>
-    <control controlID="49" controlTypeID="com.balsamiq.mockups::Arrow" x="729" y="226" w="368" h="10" measuredW="150" measuredH="100" zOrder="21" locked="false" isInGroup="-1">
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Arrow" x="729" y="226" w="368" h="10" measuredW="150" measuredH="100" zOrder="20" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <color>6989903</color>
@@ -233,25 +229,35 @@
         <rightArrow>false</rightArrow>
       </controlProperties>
     </control>
-    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="936" y="209" w="-1" h="-1" measuredW="161" measuredH="21" zOrder="22" locked="false" isInGroup="-1">
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="936" y="209" w="-1" h="-1" measuredW="161" measuredH="21" zOrder="21" locked="false" isInGroup="-1">
       <controlProperties>
         <text>4.%20Blogs%20des%20groupes%20libres</text>
       </controlProperties>
     </control>
-    <control controlID="52" controlTypeID="com.balsamiq.mockups::Paragraph" x="439" y="126" w="133" h="89" measuredW="275" measuredH="80" zOrder="23" locked="false" isInGroup="-1">
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Paragraph" x="439" y="126" w="133" h="89" measuredW="275" measuredH="80" zOrder="22" locked="false" isInGroup="-1">
       <controlProperties>
         <text>La%EEus%20sur%20l%27espace%20blog%2C%20Wordpress%2C%20h%E9bergement%2C%20et%20tout%20le%20bazar</text>
       </controlProperties>
     </control>
-    <control controlID="53" controlTypeID="com.balsamiq.mockups::Paragraph" x="439" y="259" w="133" h="32" measuredW="275" measuredH="80" zOrder="24" locked="false" isInGroup="-1">
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Paragraph" x="439" y="259" w="133" h="32" measuredW="275" measuredH="80" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
         <text>%26Ces%20blogs%20peuvent%20vous%20int%E9resser%26</text>
       </controlProperties>
     </control>
-    <control controlID="55" controlTypeID="com.balsamiq.mockups::DataGrid" x="432" y="294" w="148" h="77" measuredW="170" measuredH="107" zOrder="25" locked="false" isInGroup="-1">
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::DataGrid" x="432" y="294" w="148" h="77" measuredW="170" measuredH="107" zOrder="24" locked="false" isInGroup="-1">
       <controlProperties>
         <size>9</size>
         <text>blog%2C%20type%2C%20%20%0Ablog%20de%20la%203A%2C%20Classe%2C%20%5Bsuivre%5D%0ALes%20profs%20de%203eme%2C%20libre%2C%20%5Bsuivre%5D%0A650%2C0%2C%200%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::Icon" x="823" y="388" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CircledPlusIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::Paragraph" x="655" y="487" w="166" h="54" measuredW="275" measuredH="80" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28appara%EEt%20un%20fois%20que%20l%27on%20a%20cliqu%E9%20sur%20le%20bouton%20d%27administration%29</text>
       </controlProperties>
     </control>
   </controls>

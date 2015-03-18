@@ -96,6 +96,34 @@ Seul l'utilisateur "Administrator" (en temps que profil WordPress) du blog ou un
 2. il passe en mode modification en cliquant l'icône flottante,
 3. il retourne la case du blog qu'il souhaite supprimer et clique le bouton correspondant à l'action de suppression.
 
+### Créer un blog
+Cette action se fait en cliquant sur le bouton flottant "administrer ma page" puis en cliquant sur un deuxième bouton flottant "+", apparu lors de la première action.
+
+l'affichage du formulaire se fait alors dans une popup modal AngularJS.
+
+Le formulaire affiche dans l'ordre les champs suivants :
+- titre (champ texte, obligatoire),
+- type de blog  (champ selectbox, obligatoire)
+- sous-domaine (champ texte, obligatoire)
+
+Tant que le nom de sous-domaine n'est pas valide, le formulaire de création ne peut être envoyé.
+
+Le champ sous-domaine sera lié avec un service de recherche des sous-domaines existants sur la plateforme de blog. Ce service affichera de qui existe déjà et fera des propositions sur sous-domaines nouveaux, sur la base des critères suivants :
+ - Si le type de blog est "Etablissement"
+ 	- *[nom de l'établissement]*.blogs.laclasse.com
+ - Si le type de blog est "Classe" : 
+ 	- *[nom de la classe]*.blogs.laclasse.com
+	- *[nom de la classe]-[année scolaire]*.blogs.laclasse.com
+ - Si le type de blog est "Groupe d'élèves" : 
+ 	- *[nom du groupe]*.blogs.laclasse.com
+	- *[nom du groupe]-[année scolaire]*.blogs.laclasse.com
+
+*Attention !*, les noms de sous-domaine proposé doivent respecter les conditions suivantes :
+	- que des minuscules
+	- pas de caractères accentués
+	- caractères autorisés [a-z][0-9][-]
+	- Pas de point '.', ni autres caractères spéciaux, à part '-'.
+
 ## Interface
 
 L'application reprend le principe du damier des applications du portail de laclasse.com :
