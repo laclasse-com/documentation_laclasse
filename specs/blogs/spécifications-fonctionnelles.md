@@ -5,15 +5,15 @@
 
 Le module de Pilotage de la plateforme de blogs est un composant de l'ancienne version de laclasse.com. 
 Ce composant ne sera pas ré-écrit, car il est fonctionnel et stable.
-Le travail consistera à concevoir et coder une interface IHM qui sera le fornt-end d'intégration dans le portail V3, de la plateforme de blog.
+Le travail consistera à concevoir et coder une interface IHM qui sera le front-end d'intégration dans le portail V3, de la plateforme de blog.
 
 ## Description fonctionnelle
 
-La plateforme de blog se base sur WordPress qu'un plugin spécifique permet de piloter depuis l'ENT, tant en terme de provisinning des comptes, que de création, suppression de blogs, ainsi que de recherche d'existence de blogs ou d'utilisateurs.
+La plateforme de blogs se base sur WordPress, qu'un plugin spécifique permet de piloter depuis l'ENT, tant en termes de provisinning des comptes, que de création, suppression de blogs, ainsi que de recherche d'existence de blogs ou d'utilisateurs. Ce plugin effectue aussi du pré-paramétrage de la plateforme WordPress (ajout ou blocage de fonctionnalités, SSO CAS, etc...).
 
 Il existe 2 types de blogs :
-* blog d'établissement
-* blog de regroupement (classe, groupe d'élève, groupe libre)
+* blogs d'établissement
+* blogs de regroupement (classe, groupe d'élève, groupe libre)
 
 Une fois connecté sur laclasse.com l'utilisateur peut (en fonction de son profil et de ses droits) :
 * consulter la liste des blogs auxquels il participe,
@@ -31,14 +31,14 @@ Le plugin de pilotage de WordPress, fait le mapping entre les profils Laclasse.c
 Devient *super-administreur* de tout les blogs, pas de création de blog.
 
 #### PROF, ADM_ETB, CPE, PRINCIPAL
-Deviennent *administrateur* de leur domaine si le sous-domaine n'existe pas, avec création de blog, sinon devient *éditeur* du blog existant.
+Deviennent *administrateur* de leur sous-domaine s'il n'existe pas, avec création de blog, sinon devient *éditeur* du blog lié au sous-domaine existant.
 
 #### PRINCIPAL
 Si le blog est celui de son établissement : Devient *administrateur* de son sous-domaine.
 Pour tous les autres blogs, voir la règle ci dessus (profs, cpe, adm_etb).
 
 #### ELEVE
-Devient *contributeur* du blog existant dans le domaine, pas de création de blog.
+Devient *contributeur* du blog existant, pas de création de blog.
 
 #### PARENT
 Devient *souscripteur* du blog existant, pas de création de blog.
@@ -71,10 +71,10 @@ Le tableau ci-dessous répertorie quel profil peut créer quel type de blog, sac
 Un moteur de recherche permet à l'utilisateur de retrouver des blogs dans la liste des blogs.
 Selon les profils le périmètre de recherche sera différent.
 Le tableau suivant récapitule le périmetre du moteur de recherche des blogs selon le type de blog et le profil utilisateur.
-Deux critères sont définis :
- - Tous : tous les blogs de ce type sans restriction par établissement
- - Etablissement : tous les blogs dépendant des établissements de l'utilisateur, sans restrictions par rapport à ses rattachements de classes et de groupes.
- - Les siens : Les blogs dépendants des rattachements (classes, groupes) de l'utilisateur
+Trois critères sont définis :
+ - *Tous* : tous les blogs de ce type sans restriction par établissement
+ - *Etablissement* : tous les blogs dépendant des établissements de l'utilisateur, sans restrictions par rapport à ses rattachements de classes et de groupes.
+ - *Les siens* : Les blogs dépendants des rattachements (classes, groupes) de l'utilisateur, et donc de son(ses) établissement(s) de rattachement.
 
 | Profil \ type de blog | ETB | CLS | GRP | GPL | 
 |-----------------------|-----|-----|-----|-----|
@@ -87,7 +87,7 @@ Deux critères sont définis :
 | PARENT | Etablissement | Les siens | Les siens | Tous |
 
 ### Désinscription d'un blog
-L'utilisateur peut se désinscrire d'un blog auquel il est inscrit. Cette désinscription entraîne la suppression de son profil WordPress pour le blogs concerné, mais pas la suppression de son compte WordPress. Il peut, en effet, rester rattéché à d'autres blogs.
+L'utilisateur peut se désinscrire d'un blog auquel il est inscrit. Cette désinscription entraîne la suppression de son profil WordPress pour le blog concerné, mais pas la suppression de son compte WordPress. Il peut, en effet, rester rattéché à d'autres blogs.
 
 ### Suppression d'un blog
 Seul l'utilisateur "Administrator" (en temps que profil WordPress) du blog ou un utilisateur Super Admin peut supprimer un blog.
@@ -109,7 +109,7 @@ Dans ce mode « modification » les cases sont retournables et une fois retroun�
     - Désinscription d'un blog
    
 * Les cases sont arrangeables; 
-* les cases sont supprimables ce qui entraine la désinscription de l'utilisateur au blog .
+* les cases sont supprimables ce qui entraine la désinscription de l'utilisateur au blog.
 * La suppression d'un blog se fait avec un bouton "supprimer" sur l'envers de la case qui n'est affiché que si l'utilisateur a les droits reequis pour supprimer un blog. 
 * La création de blog se fait dans une popup (similaire à l'ajout d'application au portail.)
 
@@ -123,11 +123,10 @@ Les critères sont les suivants :
 - blog de groupes libres ? un au hasard ? 
 - Blogs de projets estampillés Erasme (certains blogs marqué par les Admins de la métropole, sur des projets particuliers)
 
-
 Le passage en mode" gestion de la page" passe tous les carrés en mode administration (comme sur le portail).
 Cela permet de gérer la couleur et l'ordre d'affichage.
 
-Un clic sur le picto "paramétrage" fait basculer le carré de sorte qu'il présent son envers. Ce nouvel afficahge permet de présenter les fonctions de désinscription, de suppression du blog (si les droits l'autorise), et de récupération de l'url du flux rss du blog (cela permet d'ajoter ce flux rss dans le lecteur rss de la page d'accueil).
+Un clic sur le picto "paramétrage" fait basculer le carré de sorte qu'il présent son envers. Ce nouvel affichage permet de présenter les fonctions de désinscription, de suppression du blog (si les droits l'autorise), et de récupération de l'url du flux rss du blog (cela permet d'ajouter ce flux rss dans le lecteur rss de la page d'accueil).
 
 ![./images/carre.png](./images/carre.png)
 
@@ -144,7 +143,7 @@ Un clic sur le picto "paramétrage" fait basculer le carré de sorte qu'il prés
 
 #### Backend
 
-  - Toutes les données nécessaire à cette application seront stockées dans l'annuaire.
+  - Toutes les données nécessaires à cette application seront stockées dans l'annuaire.
 
 #### Client
 
@@ -152,7 +151,7 @@ Un clic sur le picto "paramétrage" fait basculer le carré de sorte qu'il prés
   - Éléments mutualisés de laclasse.com
   
 ## Annexes
-### DOcumentation sur le fonctionnement du plugin de pilotage et provisionning de WordPress
+### Documentation sur le fonctionnement du plugin de pilotage et provisionning de WordPress
 
 ![controleur_ENT.md](controleur_ENT.md)
 
