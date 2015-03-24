@@ -5,9 +5,9 @@ Dans chaque application, une api donne l'état de celle-ci. Elle vérifie au min
 ## Format de la réponse
 ```json
 { 
-   'app_id' : 'DOCS',
-   'status' : 'OK',
-   'reason' : ''
+   "app_id" : "DOCS",
+   "status" : "OK",
+   "reason" : ""
 }
 ```
 - app_id : l'identifiant de l'application généralement trouvé dans la configuration de l'application.
