@@ -6,6 +6,8 @@ Dans chaque application, une api donne l'état de celle-ci. Elle vérifie au min
 ```json
 { 
    "app_id" : "DOCS",
+   "app_version" : "1.2.3",
+   "rack_env" : "production",
    "status" : "OK",
    "reason" : ""
 }
