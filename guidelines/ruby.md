@@ -5,8 +5,8 @@ Les règles de developpement ruby suivent les styleguide proposées par Github h
 
 ### Paramétrage des éditeurs
 #### SublimeText 3
-1. Installer les plugins suivants :
-  - Rubocop
+1. Installer le plugin suivant :
+  - *Rubocop*
   Positionnner dans la configuration utilisateur ```Preferences > Packages Settings > Rubocop > Settings - User```
   les paramètres suivants :
 ```json
@@ -21,3 +21,4 @@ Les règles de developpement ruby suivent les styleguide proposées par Github h
   "rubocop_config_file": ""
 }
 ```
+La verification des règles est ensuite lancer sur ```ctrl+cmd+c```pour macOS.
