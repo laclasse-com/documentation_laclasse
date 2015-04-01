@@ -27,3 +27,12 @@ L'avantage, c'est qu'il existe une gem qui permet de faire la vérification auto
 }
 ```
 La verification des règles est ensuite lancer sur ```ctrl+cmd+c```pour macOS.
+
+### Emacs
+1. Installer rubocop-emacs comme expliquer @ https://github.com/bbatsov/rubocop-emacs
+2. Ajouter ceci à votre ~/.emacs
+```lisp
+  (add-hook 'ruby-mode-hook
+	    (lambda ()
+	      (add-hook 'before-save-hook 'rubocop-autocorrect-current-file nil 'local)))
+```
