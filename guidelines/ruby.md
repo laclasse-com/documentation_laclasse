@@ -1,40 +1,20 @@
-# Règles de développement Ruby 
+# Règles de développement Ruby
 Les règles de developpement ruby suivent les styleguides proposées par Github https://github.com/styleguide/ruby.
 L'avantage, c'est qu'il existe une gem qui permet de faire la vérification automatique du style du code.
 ## Paramétrage du projet
 1. ajouter la gem rubocop
 - Soit dans le gemfile, environnement  'test', soit vec la commande ```gem install rubocop```
 
-2. Ajouter à la racine du projet, le fichier de paramétrage des règles ```.rubocop.yml``` avec la configuration suivante :
-```yaml
-Style/SpaceInsideBrackets:
-  Description: 'No spaces after [ or before ].'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-spaces-braces'
-  Enabled: false
+2. Ajouter à la racine du projet, le fichier de paramétrage des règles ```~/.rubocop.yml``` avec la configuration présente dans le fichier rubocop.yml fourni.
 
-Style/SpaceInsideHashLiteralBraces:
-  Description: "Use spaces inside hash literal braces - or don't."
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-operators'
-  Enabled: false
-
-Style/SpaceInsideParens:
-  Description: 'No spaces after ( or before ).'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-spaces-braces'
-  Enabled: false
-
-Style/SpaceInsideRangeLiteral:
-  Description: 'No spaces inside range literals.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-space-inside-range-literals'
-  Enabled: false
-```
-2. Guard
+3. Guard
 Si le projet utilise Guard, voici un exemple de Guardfile qui intégre *rubocop*
 Ce paramétrage lance *rubocop* qui si lles tests passent.
 
 ```ruby
 group :red_green_refactor, halt_on_fail: true do
 	guard :rspec, cmd: 'bundle exec rspec', title: 'service-suivi-perso',
-	              all_after_pass: false, all_on_start: false, failed_mode: :keep do
+				  all_after_pass: false, all_on_start: false, failed_mode: :keep do
 	  watch(%r{^spec/.+_spec\.rb$})
 	  watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
 	  watch(%r{^api/(.+)\.rb$})     { |m| "spec/api/#{m[1]}_spec.rb" }
@@ -42,8 +22,8 @@ group :red_green_refactor, halt_on_fail: true do
 	end
 
 	guard :rubocop, all_on_start: false do
-		watch(%r{^api/(.+)\.rb}) 
-		watch(%r{^lib/(.+)\.rb}) 
+		watch(%r{^api/(.+)\.rb})
+		watch(%r{^lib/(.+)\.rb})
 	end
 end
 ```
@@ -73,6 +53,6 @@ La verification des règles est ensuite lancer sur ```ctrl+cmd+c```pour macOS.
 2. Ajouter ceci à votre ~/.emacs
 ```lisp
   (add-hook 'ruby-mode-hook
-	    (lambda ()
-	      (add-hook 'before-save-hook 'rubocop-autocorrect-current-file nil 'local)))
+		(lambda ()
+		  (add-hook 'before-save-hook 'rubocop-autocorrect-current-file nil 'local)))
 ```
