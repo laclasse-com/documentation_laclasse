@@ -1,5 +1,12 @@
 # Règles de developpement Ruby 
-Les règles de developpement ruby suivent les styleguide proposées par Github https://github.com/styleguide/ruby.
+Les règles de developpement ruby suivent les styleguides proposées par Github https://github.com/styleguide/ruby.
+L'avantage, c'est qu'il existe une gem qui permet de faire la vérification automatique du style du code.
+## Paramétrage du projet
+1. ajouter la gem rubocop
+- Soit dans le gemfile, environnement  'test', soit vec la commande ```gem install rubocop```
+
+2. Ajouter à la racine du projet, le fichier de paramétrage des règles ```.rubocop.yml``` avec la configuration suivante :
+@todo : fichier de configuration pour désactiver les règles inutiles pour nos projets
 
 ## Paramétrage des éditeurs
 ### SublimeText 3
