@@ -9,23 +9,15 @@ L'avantage, c'est qu'il existe une gem qui permet de faire la vérification auto
 
 ```yaml
 Style/SpaceInsideBrackets:
-  Description: 'No spaces after [ or before ].'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-spaces-braces'
   Enabled: false
 
 Style/SpaceInsideHashLiteralBraces:
-  Description: "Use spaces inside hash literal braces - or don't."
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-operators'
   Enabled: false
 
 Style/SpaceInsideParens:
-  Description: 'No spaces after ( or before ).'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-spaces-braces'
   Enabled: false
 
 Style/SpaceInsideRangeLiteral:
-  Description: 'No spaces inside range literals.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-space-inside-range-literals'
   Enabled: false
 
 Style/AsciiComments:
@@ -36,7 +28,7 @@ Metrics/ClassLength:
 
 Metrics/LineLength:
   Max: 130
-  
+
 ```
 
 3. Guard
