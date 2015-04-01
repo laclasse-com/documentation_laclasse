@@ -31,7 +31,7 @@ Style/SpaceInsideRangeLiteral:
 Si le projet utilise Guard, voici un exemple de Guardfile qui intégre *rubocop*
 Ce paramétrage lance *rubocop* qui si lles tests passent.
 
-```
+```ruby
 group :red_green_refactor, halt_on_fail: true do
 	guard :rspec, cmd: 'bundle exec rspec', title: 'service-suivi-perso',
 	              all_after_pass: false, all_on_start: false, failed_mode: :keep do
