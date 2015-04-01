@@ -1,10 +1,8 @@
-# Règles de developpement
-
-## Ruby 
+# Règles de developpement Ruby 
 Les règles de developpement ruby suivent les styleguide proposées par Github https://github.com/styleguide/ruby.
 
-### Paramétrage des éditeurs
-#### SublimeText 3
+## Paramétrage des éditeurs
+### SublimeText 3
 1. Installer le plugin suivant :
   - *Rubocop*
   Positionnner dans la configuration utilisateur ```Preferences > Packages Settings > Rubocop > Settings - User```
