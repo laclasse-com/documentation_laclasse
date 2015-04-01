@@ -1,4 +1,4 @@
-# Règles de developpement Ruby 
+# Règles de développement Ruby 
 Les règles de developpement ruby suivent les styleguides proposées par Github https://github.com/styleguide/ruby.
 L'avantage, c'est qu'il existe une gem qui permet de faire la vérification automatique du style du code.
 ## Paramétrage du projet
@@ -26,6 +26,26 @@ Style/SpaceInsideRangeLiteral:
   Description: 'No spaces inside range literals.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-space-inside-range-literals'
   Enabled: false
+```
+2. Guard
+Si le projet utilise Guard, voici un exemple de Guardfile qui intégre *rubocop*
+Ce paramétrage lance *rubocop* qui si lles tests passent.
+
+```
+group :red_green_refactor, halt_on_fail: true do
+	guard :rspec, cmd: 'bundle exec rspec', title: 'service-suivi-perso',
+	              all_after_pass: false, all_on_start: false, failed_mode: :keep do
+	  watch(%r{^spec/.+_spec\.rb$})
+	  watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
+	  watch(%r{^api/(.+)\.rb$})     { |m| "spec/api/#{m[1]}_spec.rb" }
+	  watch('spec/spec_helper.rb')  { 'spec' }
+	end
+
+	guard :rubocop, all_on_start: false do
+		watch(%r{^api/(.+)\.rb}) 
+		watch(%r{^lib/(.+)\.rb}) 
+	end
+end
 ```
 
 ## Paramétrage des éditeurs
