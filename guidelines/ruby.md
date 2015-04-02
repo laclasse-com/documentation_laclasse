@@ -29,6 +29,8 @@ Metrics/ClassLength:
 Metrics/LineLength:
   Max: 130
 
+Metrics/MethodLength:
+  Max: 200
 ```
 
 3. Guard
